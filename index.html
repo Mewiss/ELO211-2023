@@ -19,12 +19,12 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<div id="countdown"></div>
+				<countdown time="100" autostart="yes" />
 			</section>
 
 			<section>Marie</section>
 			<section>Slide 2 con countdown
-				<div id="countdown"></div>
+				<countdown time="200" autostart="yes" />
 
 			</section>
 			<section>
@@ -62,26 +62,25 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
-	<script src="node_modules/reveal.js-countdown/dist/reveal-countdown.min.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, countdown],
-			countdown: { defaultTime: 600, autostart: "yes" }
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			countdown: { defaultTime: 300, autostart: true }
 		});
 
-		// Inicializar el plugin de countdown en el marcador de posición correspondiente
-		Reveal.addEventListener('slidechanged', function (event) {
-			if (event.currentSlide.id == 'slide-con-countdown') {
-				var countdownPlugin = new RevealCountdown('#countdown', { defaultTime: 300 });
-				countdownPlugin.start();
-			}
-		});
+		
 	</script>
 </body>
 
