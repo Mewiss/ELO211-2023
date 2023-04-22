@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div id="countdown"></div>
+			</section>
+
+			<section>Marie</section>
+			<section>Slide 2 con countdown
+				<div id="countdown"></div>
+
+			</section>
+			<section>
+				<h1>5 minutes timer</h1>
+				<countdown time="300" autostart="yes" />
+			</section>
+			<section>
+				<h1>This is a sample slide</h1>
+				<ul>
+					<li>Apples</li>
+					<li>Oranges</li>
+					<li>Grapes</li>
+				</ul>
+
+				<h2>Sample code</h2>
+				You can insert code blocks using template literals inside `
+				<pre>` and `<code>` elements.
+					
+						<pre>
+						<code data-line-numbers data-trim data-no-escape>
+						{`
+						  const name = "hello world";
+						  if(name === 'hello') {
+							console.log('world');
+						  }
+						`}
+						</code>
+						</pre>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="node_modules/reveal.js-countdown/dist/reveal-countdown.min.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, countdown],
+			countdown: { defaultTime: 600, autostart: "yes" }
+		});
+
+		// Inicializar el plugin de countdown en el marcador de posición correspondiente
+		Reveal.addEventListener('slidechanged', function (event) {
+			if (event.currentSlide.id == 'slide-con-countdown') {
+				var countdownPlugin = new RevealCountdown('#countdown', { defaultTime: 300 });
+				countdownPlugin.start();
+			}
+		});
+	</script>
+</body>
+
+</html>
