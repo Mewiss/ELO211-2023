@@ -9,23 +9,1450 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
 </head>
 
 <body>
+
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				<countdown time="100" autostart="yes" />
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+
 			</section>
 
-			<section>Marie</section>
-			<section>Slide 2 con countdown
-				<countdown time="200" autostart="yes" />
+			<section>
+				<img src="images/grupos.jpg">
+			</section>
 
+			<section>
+				<h4>Comenten entre los grupos</h4>
+				<p>¿De qué trata su proyecto?</p>
+				<p>¿Cuáles son los principales bloques y cómo funcionan?</p>
+				<p>¿Qué bloques aún no pueden resolver?</p>
+				<p>Anoten sus principales conclusiones</p>
+			</section>
+
+
+			<section>
+				<h2>Circuito secuencial</h2>
+				<p class="fragment">Sus salidas dependen de la entrada actual y las anteriores.</p>
+				<p class="fragment">Por lo tanto, tienen <span class="fragment custom bold"> memoria</span></p>
+
+			</section>
+
+			<section>
+				<h4>¿Cómo implementar una memoria?</h4>
+				<div class="columns">
+					<div>
+						<h3 class="fragment" data-fragment-index="1">Latches</h3>
+						<p class="fragment" data-fragment-index="3">Cambia según sus señales de control</p>
+					</div>
+					<div>
+						<h3 class="fragment" data-fragment-index="2">Flip-flops</h3>
+						<p class="fragment" data-fragment-index="4">Cambia según sus señales de control en los cambios
+							del reloj</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section><!--Latch SR-->
+				<h3>Latches tipo SR</h3>
+
+				<div class="row" class="r-stretch">
+					<div class="col">
+
+						<img class="fragment" data-fragment-index="1" src="images/C04-LatchSR-01.svg">
+					</div>
+					<div class="col">
+						<img class="fragment" class="r-stretch" data-fragment-index="2" src="images/C04-LatchSR-02.svg">
+					</div>
+					<div class="col">
+						<img class="fragment" data-fragment-index="3" src="images/C04-LatchSR-03.svg">
+					</div>
+				</div>
+			</section>
+
+
+
+			<section><!--Latch D-->
+				<h3>Latches tipo D</h3>
+
+				<img src="images/C04-LatchD-1.svg">
+
+				<!--
+				<span class="fragment"></span>
+				<span class="fragment"></span>
+				<span class="fragment"></span>
+
+				<div data-animate data-src="images/C04-LatchD-1.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Tabla", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] },
+						{ "element": "#Circuito", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "1"} ] },
+						{ "element": "#Simbolo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "2"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+				<!--
+		</div>
+		-->
+			</section>
+
+			<section><!--FF-->
+				<h3>Flip-Flop D</h3>
+
+				<img src="images/C04-FlipFlopD.svg">
+
+				<!--
+			<span class="fragment"></span>
+			<span class="fragment"></span>
+			<span class="fragment"></span>-->
+
+				<!--
+			<div data-animate data-src="images/C04-FlipFlopD.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Tabla", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] },
+						{ "element": "#Circuito", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "1"} ] },
+						{ "element": "#Simbolo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "2"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+				<!--
+			</div>-->
+			</section>
+
+			<section> <!-- Clock -->
+				<h3>Clock</h3>
+				<p>Periodo (T): duración de un ciclo del clock </p>
+				<p>frecuencia (f): cantidad de ciclos por unidad de tiempo f=1/T </p>
+				<img src="images/C04-Clock-def.svg">
+				<!--
+			<span class="fragment"></span>
+
+			<div data-animate data-src="images/C04-Clock-def.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Periodo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+
+				<!--</div>-->
+			</section>
+
+			<section>
+				<h3>Registros</h3>
+				<p> Cuando queremos guardar información de largo N, usamos un grupo de N flipflops que usan el mismo
+					clock </p>
+			</section>
+
+			<section>
+				<h4>¿Qué entradas debe tener un latch SR para conservar su estado?</h4>
+				<p>a) S=0, R=0</p>
+				<p>b) S=0, R=1</p>
+				<p>c) S=1, R=0</p>
+				<p>d) S=1, R=1</p>
+			</section>
+
+			<section><!--P2-->
+				<h4>¿En qué tiempo NO cambia la salida del latch tipo D?</h4>
+
+				<img src="images/C04-Time-LatchD.svg">
+
+			</section>
+
+			<section><!--P2-->
+				<h4>¿En qué tiempo cambia la salida del Flip-flop tipo D?</h4>
+
+				<img src="images/C04-Time-FFhD.svg">
+
+			</section>
+
+
+			<!--Máquinas de estado-->
+			<section>
+				<h2 class="fragment" data-fragment-index="2">FSMs: Finite State Machines</h2>
+				<h3 class="fragment" data-fragment-index="1">Máquinas de estado finito</h3>
+				<p class="fragment" data-fragment-index="3"> Estrategia para definir circuitos secuenciales a partir de
+					sus estados y transiciones.</p>
+			</section>
+
+			<section>
+				<h4>FSM</h4>
+				<ul>
+					<li class="fragment">Tienen entradas, salidas y estados</li>
+					<li class="fragment">Poseen un estado inicial (Ej: IDLE)</li>
+					<li class="fragment">Debemos definir las transiciones entre estados</li>
+					<li class="fragment">En cada ciclo del clock avanza al estado siguiente</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Caso de estudio: Semáforo inteligente</h4>
+				<p>Un semáforo controla el cruce entre las calles A y B. Para esto, cuenta con los sensores Ta y Tb que
+					indican con un 1 cuando pasa un auto. El semáforo permanecerá en verde para una calle hasta que no
+					pase ningún auto por ella. </p>
+				<img class="r-stretch" src="images/C04-Semaforo.svg">
+
+			</section>
+
+
+
+
+			<section>
+				<p>En grupos, realicen un diagrama de estados para el problema de la estación asignada usando el modelo
+					de Moore </p>
+				<countdown time="390" autostart="yes" />
+			</section>
+
+			<section>
+				<p>Avancen una estación de trabajo hacia la derecha</p>
+				<p>En grupos, realicen un diagrama de estados para el problema dado usando el modelo de Mealy </p>
+				<countdown time="240" autostart="yes" />
+			</section>
+
+			<section>
+				<h4>Caso 1</h4>
+				<p>Una radio tiene control de volumen con 4 niveles. Los usuarios pueden subir el volumen apretando un
+					botón con signo + o bajarlo con un botón con signo -. Diseñe una FSM cuya salida sea el nivel de
+					volumen
+					seteado por el usuario.</p>
+
+			</section>
+
+			<section>
+				<h4>Caso 2</h4>
+				<p>Una máquina expendedora sólo recibe monedas de 500 pesos. Al recibir una nueva moneda, el sensor S
+					toma
+					el valor 1 por un ciclo del reloj. Diseñe una FSM cuya salida indique el dinero acumulado. Cuando el
+					usuario quiera pagar, apretará el botón P y su conteo debe volver a 0.
+				</p>
+			</section>
+
+			<section>
+				<h4>Caso 3</h4>
+				<p>Una puerta del metro es controlada mediante 2 botones: uno para cerrar y uno para abrir. Para poder
+					realizar el movimiento, se cuenta con un motor que recibe dos señales: una indica el sentido de giro
+					(hacia un lado cierra y hacia el otro abre) y la otra indica si gira o no. Realice una FSM capaz de
+					realizar dicho control.</p>
+			</section>
+
+
+			<section>
+				<h2>¿Cómo implementar la FSM como circuito?</h2>
+				<p class="fragment"></p>
+			</section>
+
+
+			<!--Repaso-->
+			<!--Circuitos-->
+			<section>
+				<h3>Ejemplo: opciones de codificación de estados</h4>
+
+					<table class="tg r-stretch">
+						<thead>
+							<tr>
+								<th class="tg-0lax">State</th>
+								<th class="tg-0lax">C. binario</th>
+								<th class="tg-0lax">C. Gray</th>
+								<th class="tg-0lax">C. One-Hot</th>
+								<th class="tg-0lax">C. One-Cold</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tg-0lax">S0</td>
+								<td class="tg-0lax">00</td>
+								<td class="tg-0lax">00</td>
+								<td class="tg-0lax">0001<br></td>
+								<td class="tg-0lax">1110</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S1</td>
+								<td class="tg-0lax">01</td>
+								<td class="tg-0lax">01</td>
+								<td class="tg-0lax">0010<br></td>
+								<td class="tg-0lax">1101</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S2</td>
+								<td class="tg-0lax">10<br></td>
+								<td class="tg-0lax">11</td>
+								<td class="tg-0lax">0100<br></td>
+								<td class="tg-0lax">1011</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S3</td>
+								<td class="tg-0lax">11</td>
+								<td class="tg-0lax">10</td>
+								<td class="tg-0lax">1000</td>
+								<td class="tg-0lax">0111</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="fragment">Se debe elegir una estrategia de codificación</p>
+			</section>
+
+			<section>
+				<h3>Ejemplo tabla de salidas</h3>
+
+				<table class="tg r-stretch">
+					<thead>
+						<tr>
+							<th class="tg-0lax">State</th>
+							<th class="tg-0lax">LA</th>
+							<th class="tg-0lax">LB</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-0lax">S0</td>
+							<td class="tg-0lax">001</td>
+							<td class="tg-0lax">100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S1</td>
+							<td class="tg-0lax">010</td>
+							<td class="tg-0lax">100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S2</td>
+							<td class="tg-0lax">100</td>
+							<td class="tg-0lax">001</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S3</td>
+							<td class="tg-0lax">100</td>
+							<td class="tg-0lax">010</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				<h3>Ejemplo tabla de transición de estados</h3>
+
+
+				<table class="tg r-stretch">
+					<thead>
+						<tr>
+							<th class="tg-0lax">S(t)</th>
+							<th class="tg-0lax">In(TATB)</th>
+							<th class="tg-0lax">S(t+1)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-0lax">S0</td>
+							<td class="tg-0lax">1X</td>
+							<td class="tg-0lax">S0</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S0</td>
+							<td class="tg-0lax">0X</td>
+							<td class="tg-0lax">S1</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S1</td>
+							<td class="tg-0lax">XX</td>
+							<td class="tg-0lax">S2</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S2</td>
+							<td class="tg-0lax">X1</td>
+							<td class="tg-0lax">S2</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S2</td>
+							<td class="tg-0lax">X0</td>
+							<td class="tg-0lax">S3</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">S3</td>
+							<td class="tg-0lax">XX</td>
+							<td class="tg-0lax">S0</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section>
+				<p>Realicen el circuito para implementar una de las FSM</p>
+				<countdown time="600" autostart="yes" />
+			</section>
+
+			<section class="Title" data-include> <!--Titulo-->
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Circuito secuencial con Máquina de Moore</h2>
+				<img class="r-stretch" data-id="box" src="images/C04-GeneralMoore.svg">
+			</section>
+
+			<section data-auto-animate>
+				<h2>Circuito secuencial con Máquina de Mealy</h2>
+				<img class="r-stretch" data-id="box" src="images/C04-GeneralMealy.svg">
+			</section>
+
+			<section>
+				<h4>Tablas de estados, transiciones y salidas máquina de Moore</h4>
+				<div class="row">
+					<div class="col">
+
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-small">S(t)</th>
+									<th class="tg-small">Cod.</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">00</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">01</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">10</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">11</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col">
+
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-small">State</th>
+									<th class="tg-small">LA</th>
+									<th class="tg-small">LB</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">001</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">010</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">001</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="col">
+
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-small">S(t)</th>
+									<th class="tg-small">In(TATB)</th>
+									<th class="tg-small">S(t+1)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">1X</td>
+									<td class="tg-small">S0</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">0X</td>
+									<td class="tg-small">S1</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">XX</td>
+									<td class="tg-small">S2</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">X1</td>
+									<td class="tg-small">S2</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">X0</td>
+									<td class="tg-small">S3</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">XX</td>
+									<td class="tg-small">S0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h4>Tabla de estados y transiciones máquina de Moore</h4>
+				<div class="row">
+					<div class="col">
+						<img src="images/C04-EjemploMoore.svg">
+					</div>
+
+					<div class="col">
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-0lax">St</th>
+									<th class="tg-0lax">In(Ta,Tb)<br></th>
+									<th class="tg-0lax">St+1</th>
+									<th class="tg-0lax">Out(La,Lb)<br></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">0X<br></td>
+									<td class="tg-0lax">01<br></td>
+									<td class="tg-0lax">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">1X</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">01</td>
+									<td class="tg-0lax">XX</td>
+									<td class="tg-0lax">10<br></td>
+									<td class="tg-0lax">010100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">10</td>
+									<td class="tg-0lax">X0</td>
+									<td class="tg-0lax">11<br></td>
+									<td class="tg-0lax">100001<br></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">10<br></td>
+									<td class="tg-0lax">X1</td>
+									<td class="tg-0lax">10<br></td>
+									<td class="tg-0lax">100001</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">11</td>
+									<td class="tg-0lax">XX</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">100010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+
+			</section>
+
+			<!--
+			<section>
+				<h4>Tabla de estados y transiciones máquina de Mealy</h4>
+				<div class="row">
+					<div class="col">
+						<img src="images/C04-EjemploMealy.svg">
+					</div>
+
+					<div class="col">
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-0lax">St</th>
+									<th class="tg-0lax">In(Ta,Tb)<br></th>
+									<th class="tg-0lax">St+1</th>
+									<th class="tg-0lax">Out(La,Lb)<br></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">0X<br></td>
+									<td class="tg-0lax">01<br></td>
+									<td class="tg-0lax">010100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">1X</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">01</td>
+									<td class="tg-0lax">X0<br></td>
+									<td class="tg-0lax">00<br></td>
+									<td class="tg-0lax">100010</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">01</td>
+									<td class="tg-0lax">X1</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax">100010</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+-->
+			<section>
+				<h5>Tabla de estados y transiciones máquina de Mealy</h5>
+
+				<img class="r-stretch" src="images/C04-EjemploMealy.svg">
+
+
+
+				<table class="tg">
+					<thead>
+						<tr>
+							<th class="tg-0lax">St</th>
+							<th class="tg-0lax">In(Ta,Tb)<br></th>
+							<th class="tg-0lax">St+1</th>
+							<th class="tg-0lax">Out(La,Lb)<br></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">0X<br></td>
+							<td class="tg-0lax">1<br></td>
+							<td class="tg-0lax">010100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">1X</td>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">001100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">X0<br></td>
+							<td class="tg-0lax">0<br></td>
+							<td class="tg-0lax">100001</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">X1</td>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">100010</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</section>
+
+			<section>
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="2">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="0">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">0X<br></td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1<br></td>
+										<td class="tg-0lax">010100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">1X</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0</td>
+										<td class="tg-0lax">001100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X0<br></td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0<br></td>
+										<td class="tg-0lax">100001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1</td>
+										<td class="tg-0lax">100010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
+										<td class="tg-0lax">1<br></td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">0</span>10100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
+										<td class="tg-0lax">0</td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">0</span>01100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
+										<td class="tg-0lax">0<br></td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">1</span>00001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
+										<td class="tg-0lax">1</td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">1</span>00010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+
+
+
+
+				</section>
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
+										<td class="tg-0lax">1<br></td>
+										<td class="tg-0lax">0<span class="fragment custom bold"
+												data-fragment-index="0">1</span>0100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
+										<td class="tg-0lax">0</td>
+										<td class="tg-0lax">0<span class="fragment custom bold"
+												data-fragment-index="0">0</span>1100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
+										<td class="tg-0lax">0<br></td>
+										<td class="tg-0lax">1<span class="fragment custom bold"
+												data-fragment-index="0">0</span>0001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
+										<td class="tg-0lax">1</td>
+										<td class="tg-0lax">1<span class="fragment custom bold"
+												data-fragment-index="0">0</span>0010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+
+
+
+
+				</section>
+			</section>
+
+			<section>
+				<h4>Caso 1</h4>
+				<p>Una radio tiene control de volumen con 4 niveles. Los usuarios pueden subir el volumen apretando un
+					botón con signo + o bajarlo con un botón con signo -. Diseñe una FSM cuya salida sea el nivel de
+					volumen
+					seteado por el usuario.</p>
+
+			</section>
+
+			<section>
+				<h4>Caso 2</h4>
+				<p>Una máquina expendedora sólo recibe monedas de 500 pesos. Al recibir una nueva moneda, el sensor S
+					toma
+					el valor 1 por un ciclo del reloj. Diseñe una FSM cuya salida indique el dinero acumulado. Cuando el
+					usuario quiera pagar, apretará el botón P y su conteo debe volver a 0.
+				</p>
+			</section>
+
+			<section>
+				<h4>Caso 3</h4>
+				<p>Una puerta del metro es controlada mediante 2 botones: uno para cerrar y uno para abrir. Para poder
+					realizar el movimiento, se cuenta con un motor que recibe dos señales: una indica el sentido de giro
+					(hacia un lado cierra y hacia el otro abre) y la otra indica si gira o no. Realice una FSM capaz de
+					realizar dicho control.</p>
+			</section>
+
+			<section>
+				<p>En base a las máquinas de Mealy de la clase anterior, diseñen un circuito</p>
+				<countdown time="480" autostart="yes" />
+			</section>
+
+			<section>
+				<h3>Flip-Flop JK</h3>
+				<div class="row">
+					<div class="col fragment">
+						<img src="images/C04-FFJK.svg">
+					</div>
+					<div class="col fragment">
+						<img src="images/C04-FFJK-TablaVerdad.svg">
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+				<h4>Caso de estudio: Semáforo inteligente modificado</h4>
+				<p> Después de unos meses de evaluación del circuito implementado, en base a su máquina de Mealy, la Municipalidad le ha pedido modificar su máquina de Mealy. En concreto, quieren que los semáforos estén al menos 2 ciclos reloj en cada color y que no se salte ningún color. </p>
+				<img class="r-stretch" src="images/C04-Semaforo.svg">
+
+			</section>
+
+
+			<section class="Title" data-include> <!--Titulo-->
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+
+
+
+
+			<section>
+				<section>
+					<h2>Test </h2>
+					<svg width="250" height="100" viewBox="-50 -50 250 100" xmlns="http://www.w3.org/2000/svg">
+						<style>
+							.nor {
+								fill: lightgray;
+							}
+						</style>
+						<g>
+							<!-- NOR gates -->
+							<rect x="0" y="-10" width="10" height="10" class="nor" />
+							<rect x="0" y="-30" width="10" height="10" class="nor" />
+
+							<!-- Connection 
+						  <path d="M 10,0 V -5 C 10,-7.209 8.209,-9 6,-9 H 0" />
+						  <path d="M 0,-30 H 6 C 8.209,-30 10.000,-28.209 10.000,-26 V -21" />
+						  <path d="M 10,-20 V -15 C 10,-12.791 8.209,-11 6,-11 H 0" />
+						  <path d="M 0,-10 H 6 C 8.209,-10 10.000,-8.209 10.000,-6 V -1" />-->
+
+							<!-- Labels -->
+							<text x="23" y="-10" font-size="12">Q</text>
+							<text x="23" y="-30" font-size="12" text-decoration="overline">Q</text>
+							<text x="-10" y="-10" font-size="12">R</text>
+							<text x="-10" y="-30" font-size="12">S</text>
+						</g>
+					</svg>
+
+				</section>
+				<section>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+
+					<div data-animate data-src="images/decisiontree.svg">
+						<!--
+{ "setup": [
+{ "element": "#Price", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "0"} ] },
+{ "element": "#Host1", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "1"} ] },
+{ "element": "#Choice11", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "2"} ] },
+{ "element": "#Choice12", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "3"} ] },
+{ "element": "#Host2", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "4"} ] },
+{ "element": "#Choice2", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "5"} ] },
+{ "element": "#Host3", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "6"} ] },
+{ "element": "#Choice3", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "7"} ] }
+]}
+-->
+					</div>
+				</section>
+				<section>
+					<h2>Testeo animate</h2>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+
+					<div data-animate data-src="images/C04-LatchSR-02-3.svg">
+						<!-- 
+						{ "setup": [
+						{ "element": "#Nor2", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] },
+						{ "element": "#Nor1", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "1"} ] },
+						{ "element": "#Nor2-body", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "2"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+
+					</div>
+
+				</section>
+
+				<section>
+					<h2>Testeo animate 2</h2>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+					<span class="fragment"></span>
+
+					<div data-animate data-src="images/C04-LatchSR-02-3.svg">
+						<!-- 
+						{ "setup": [ ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						],
+						[]
+						]
+						}
+						-->
+
+					</div>
+
+				</section>
+				<section>
+					<h3>Análisis Latch SR</h3>
+					<svg id="latchSR" xmlns="http://www.w3.org/2000/svg" width="350" height="350"
+						viewBox="0 0 117.88425 110.54374">
+
+						<g style="filter:url(#a)" transform="matrix(1.33333 0 0 -1.33333 64.763 17.477)">
+							<path class="fragment" id="Nor1-in" d="M-16.388 6.35h-8.13M-16.388-6.35h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path class="fragment" id="Nor1-body"
+								d="M-15.63 12.7h8.544A25.4 25.4 0 0 0 15.63 0 25.402 25.402 0 0 0-7.085-12.697l-11.228-.001c3.7 7.975 3.7 17.423 0 25.398h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path class="fragment" id="Nor1-out" d="M19.541 0h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-not" d="M19.541 0a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-in" d="M-16.388-50.344h-8.13M-16.388-63.043h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-body"
+								d="M-15.63-43.994h8.544A25.4 25.4 0 0 0 15.63-56.693 25.402 25.402 0 0 0-7.085-69.392h-11.228c3.7 7.974 3.7 17.423 0 25.397h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-out" d="M19.541-56.694h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-not" d="M19.541-56.694a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-1" d="M24.519 0v-14.173L-24.52-36.171v-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-2" d="M24.519-56.694v14.174L-24.52-20.523V-6.35M24.519 0h14.173"
+								style="fill:none;stroke:#fefefe;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.274 5.457)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-notQ" d="M24.519-56.694h14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 33.488 -48.718)">
+								<tspan x="0" y="0">¯</tspan>
+							</text><text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.211 -51.236)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-R" d="M-24.519 6.35h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -49.545 2.945)">
+								<tspan x="0" y="0">R</tspan>
+							</text>
+							<path id="line-S" d="M-24.519-63.043h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -47.746 -66.446)">
+								<tspan x="0" y="0">S</tspan>
+							</text>
+						</g>
+					</svg>
+				</section>
+				<section>
+					<h3>Análisis Latch SR</h3>
+					<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 117.88425 110.54374">
+
+						<g style="filter:url(#a)" transform="matrix(1.33333 0 0 -1.33333 64.763 17.477)">
+							<path id="Nor1-in" d="M-16.388 6.35h-8.13M-16.388-6.35h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-body"
+								d="M-15.63 12.7h8.544A25.4 25.4 0 0 0 15.63 0 25.402 25.402 0 0 0-7.085-12.697l-11.228-.001c3.7 7.975 3.7 17.423 0 25.398h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-out" d="M19.541 0h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-not" d="M19.541 0a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-in" d="M-16.388-50.344h-8.13M-16.388-63.043h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-body"
+								d="M-15.63-43.994h8.544A25.4 25.4 0 0 0 15.63-56.693 25.402 25.402 0 0 0-7.085-69.392h-11.228c3.7 7.974 3.7 17.423 0 25.397h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-out" d="M19.541-56.694h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-not" d="M19.541-56.694a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-1" d="M24.519 0v-14.173L-24.52-36.171v-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-2" d="M24.519-56.694v14.174L-24.52-20.523V-6.35M24.519 0h14.173"
+								style="fill:none;stroke:#fefefe;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.274 5.457)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-notQ" d="M24.519-56.694h14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 33.488 -48.718)">
+								<tspan x="0" y="0">¯</tspan>
+							</text><text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.211 -51.236)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-R" d="M-24.519 6.35h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -49.545 2.945)">
+								<tspan x="0" y="0">R</tspan>
+							</text>
+							<path id="line-S" d="M-24.519-63.043h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -47.746 -66.446)">
+								<tspan x="0" y="0">S</tspan>
+							</text>
+						</g>
+					</svg>
+				</section>
+				<section>
+					<h3>Análisis Latch SR</h3>
+					<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 117.88425 110.54374">
+
+						<g style="filter:url(#a)" transform="matrix(1.33333 0 0 -1.33333 64.763 17.477)">
+							<path id="Nor1-in" d="M-16.388 6.35h-8.13M-16.388-6.35h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-body"
+								d="M-15.63 12.7h8.544A25.4 25.4 0 0 0 15.63 0 25.402 25.402 0 0 0-7.085-12.697l-11.228-.001c3.7 7.975 3.7 17.423 0 25.398h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-out" d="M19.541 0h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor1-not" d="M19.541 0a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-in" d="M-16.388-50.344h-8.13M-16.388-63.043h-8.13"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-body"
+								d="M-15.63-43.994h8.544A25.4 25.4 0 0 0 15.63-56.693 25.402 25.402 0 0 0-7.085-69.392h-11.228c3.7 7.974 3.7 17.423 0 25.397h2.683z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-out" d="M19.541-56.694h4.978"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Nor2-not" d="M19.541-56.694a1.956 1.956 0 1 1-3.911 0 1.956 1.956 0 0 1 3.911 0z"
+								style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:.797;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-1" d="M24.519 0v-14.173L-24.52-36.171v-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<path id="Cross-2" d="M24.519-56.694v14.174L-24.52-20.523V-6.35M24.519 0h14.173"
+								style="fill:none;stroke:#fefefe;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.274 5.457)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-notQ" d="M24.519-56.694h14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 33.488 -48.718)">
+								<tspan x="0" y="0">¯</tspan>
+							</text><text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 31.211 -51.236)">
+								<tspan x="0" y="0">Q</tspan>
+							</text>
+							<path id="line-R" d="M-24.519 6.35h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -49.545 2.945)">
+								<tspan x="0" y="0">1</tspan>
+							</text>
+							<path id="line-S" d="M-24.519-63.043h-14.173"
+								style="fill:none;stroke:#ffffff;stroke-width:.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+							<text xml:space="preserve"
+								style="font-variant:normal;font-weight:400;font-size:9.9626px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+								transform="matrix(1 0 0 -1 -47.746 -66.446)">
+								<tspan x="0" y="0">0</tspan>
+							</text>
+						</g>
+					</svg>
+				</section>
+			</section>
+
+
+			<section>
+
+				<section>
+					<section>
+						<h1>Titulo de la diapositiva</h1>
+						<p>Contenido de la diapositiva</p>
+					</section>
+					<section>
+						<h2>Título más pequeño arriba</h2>
+						<div class="central-content">
+							<p>Contenido central de la diapositiva</p>
+						</div>
+					</section>
+					<section>
+						<div class="columns">
+							<div>
+								<h3>Título de la diapositiva</h3>
+								<p>Texto de la diapositiva</p>
+							</div>
+							<div>
+								<img src="ruta-a-la-imagen.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="columns">
+							<div>
+								<h3>Título de la diapositiva Columnas</h3>
+								<ul>
+									<li>Elemento 1</li>
+									<li>Elemento 2</li>
+									<li>Elemento 3</li>
+								</ul>
+							</div>
+							<div>
+								<img src="ruta-a-la-imagen.jpg">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div>
+								<h3>Título de la diapositiva</h3>
+								<ul>
+									<li>Elemento 1</li>
+									<li>Elemento 2</li>
+									<li>Elemento 3</li>
+								</ul>
+							</div>
+							<div>
+								<img src="ruta-a-la-imagen.jpg">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3>Título de la diapositiva</h3>
+						<div class="columns">
+							<div>
+								<p>Contenido de la primera columna</p>
+							</div>
+							<div>
+								<p>Contenido de la segunda columna</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="left-content">
+							<h3>Título de la diapositiva</h3>
+							<p>Texto de la diapositiva</p>
+						</div>
+						<div class="right-content">
+							<img src="ruta-a-la-imagen.jpg">
+						</div>
+					</section>
+					<section>
+						<div class="left-content">
+							<img src="ruta-a-la-imagen.jpg">
+						</div>
+						<div class="right-content">
+							<h3>Título de la diapositiva</h3>
+							<p>Texto de la diapositiva</p>
+						</div>
+					</section>
+					<section>
+						<div class="columns">
+							<div>
+								<img src="ruta-a-la-imagen.jpg">
+							</div>
+							<div>
+								<h3>Título de la diapositiva</h3>
+								<p>Texto de la diapositiva</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="columns">
+							<div>
+								<h3>Título de la diapositiva</h3>
+								<p>Texto de la diapositiva</p>
+							</div>
+							<div>
+								<img src="ruta-a-la-imagen.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="left-content">
+							<h3>Título de la diapositiva</h3>
+							<p>Texto de la diapositiva</p>
+						</div>
+						<div class="right-content">
+							<ul>
+								<li>Elemento 1</li>
+								<li>Elemento 2</li>
+								<li>Elemento 3</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="row">
+							<div class="col">
+								<h2>Título de la columna 1</h2>
+								<p>Contenido de la columna 1</p>
+							</div>
+							<div class="col">
+								<h2>Título de la columna 2</h2>
+								<p>Contenido de la columna 2</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<h2>Título de la columna 3</h2>
+								<p>Contenido de la columna 3</p>
+							</div>
+							<div class="col">
+								<h2>Título de la columna 4</h2>
+								<p>Contenido de la columna 4</p>
+							</div>
+						</div>
+					</section>
+				</section>
 			</section>
 			<section>
 				<h1>5 minutes timer</h1>
@@ -63,24 +1490,30 @@
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
+			slideNumber: true,
 			dependencies: [
 
 				{ src: "plugin/countdown/countdown.js" },
 
 			],
+			animate: {
+				autoplay: true
+			},
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
 			countdown: { defaultTime: 300, autostart: true }
 		});
 
-		
+		Reveal.configure({ pdfSeparateFragments: false });
 	</script>
 </body>
 
