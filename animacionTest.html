@@ -102,6 +102,60 @@
 				<countdown time="600" autostart="yes" />
 			</section>
 
+			<section class="Title" data-include> <!--Titulo-->
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+			<section>
+				<h3>¿Cómo definimos el Clock?</h3>
+				<ul>
+					<li class="fragment">Identificar qué tan rápida debe ser la salida</li>
+					<li class="fragment">Chequear frecuencias recomendadas para los componentes</li>
+					<li class="fragment">Chequear que los bloques funcionen correctamente</li>
+					<li class="fragment">Chequear que se cumplen las restricciones temporales</li>
+					<li class="fragment">Considerar si sube la latencia*</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
+					<div class="row">
+
+						<div class="col fragment">
+
+
+
+							<img height="85%" width="85%" src="images/Tiempo de setup.png">
+
+							<p style="font-size: 30px;">
+								Restricción tiempo de setup
+								\[\begin{equation*}
+								T_c \geq t_{pcq} + t_{pd} + t_{setup}
+								\end{equation*}\]
+							</p>
+						</div>
+
+						<div class="col fragment">
+
+
+
+							<img height="85%" width="85%" src="images/Tiempodehold.png">
+
+							<p style="font-size: 30px;">
+								Restricción tiempo de hold
+								\[\begin{equation*}
+								t_{ccq} + t_{cd} \geq t_{hold}
+								\end{equation*}\]
+							</p>
+						</div>
+
+
+
+
+			</section>
+
 			<section>
 				<h3>Gráfico temporal entre sistemas secuenciales</h3>
 				<svg id="mysvg" stroke-width="5" vector-effect="non-scaling-stroke" viewBox="-0.5 -0.5 1134.529 506.85"
@@ -120,7 +174,7 @@
 						<rect style="fill:#ff9955;fill-opacity:0.75;stroke-linejoin:bevel;stroke-miterlimit:4.4"
 							id="apertura-1-0" width="74.785995" height="69.031998" x="170.3537" y="128.62601" />
 						<rect style="fill:#ff9955;fill-opacity:0.75;   stroke-linejoin:bevel;stroke-miterlimit:4.4"
-							id="apertura-1-1" width="74.785995" height="69.031998" x="170.3537" y="426.285" />
+							id="apertura-1-1" width="74.785995" height="69.031998" x="170.3537" y="430" />
 
 					</g>
 					<g id="apertura-2" class="vA" style="display:inline">
@@ -128,8 +182,12 @@
 						<rect style="fill:#ff9955;fill-opacity:0.75;   stroke-linejoin:bevel;stroke-miterlimit:4.4"
 							id="apertura-2-0" width="74.785995" height="69.031998" x="626.2738" y="129.18764" />
 						<rect style="fill:#ff9955;fill-opacity:0.75;   stroke-linejoin:bevel;stroke-miterlimit:4.4"
-							id="apertura-2-1" width="74.785995" height="69.031998" x="626.2738" y="425.96942" />
+							id="apertura-2-1" width="74.785995" height="69.031998" x="626.2738" y="430" />
 					</g>
+
+					<rect
+						style="fill:#f6ff55;fill-opacity:0.75;   stroke:#969e09;  stroke-miterlimit:4.4;stroke-dasharray:none"
+						id="tslack" width="74.785995" height="50" x="400" y="350" />
 
 
 
@@ -335,10 +393,14 @@
 
 
 					<g id="g2249" class="ventanaApertura" style="display:inline" inkscape:label="q2fixed">
-						<path class="ventanaApertura"
-							d="m469.328 290.413-23.744-33.507L-.5 256.372l-23.744 34.041 22.658 34.042H446.67Z"
+						<!-- <path class="ventanaApertura"
+							d="m469.328 290.413 -23.744-33.507L-.5 256.372l-23.744 34.041 22.658 34.042H446.67Z"
 							style="fill-opacity:0;stroke:#6122e4;stroke-miterlimit:4.4" id="path112"
-							inkscape:label="initcc" />
+							inkscape:label="initcc" /> -->
+
+						<polygon id="path112" points="-100,320 -100,285 -100,250 455,250 465,285 455,320"
+							style="fill:none;fill-opacity:0.546618;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none" />
+
 
 						<path class="moveInit"
 							d="m266.355 163.198-13.486-33.92-253.369-.54-13.486 34.46 12.869 34.46h254.603Z"
@@ -400,7 +462,7 @@
 						<text xml:space="preserve" x="240.40945" y="107.64"
 							style="font-size:18.6667px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';text-align:center;text-anchor:middle;fill:#333333;fill-opacity:0.370748;stroke:none;stroke-linejoin:bevel;stroke-miterlimit:4.4"
 							id="text62">
-							<tspan x="240.40945" y="107.64" style="fill:#800080;fill-opacity:0.75" id="tspan60">tccq
+							<tspan x="280.40945" y="107.64" style="fill:#800080;fill-opacity:0.75" id="tspan60">tccq
 							</tspan>
 						</text>
 						<text xml:space="preserve" x="356.17395" y="107.80016"
@@ -612,12 +674,12 @@
 							sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc"
 							inkscape:label="clock" />
 						<path id="flanco1" d="M 224 0 V 497 Z "
-							style="fill:none;fill-opacity:0.546618;stroke:#22e4cac7; "></path>
+							style="fill:none;fill-opacity:0.546618;stroke:#178879c7; "></path>
 						<path id="flanco2" d="M 680 0 V 497 Z "
-							style="fill:none;fill-opacity:0.546618;stroke:#22e4cac7; "></path>
+							style="fill:none;fill-opacity:0.546618;stroke:#178879c7; "></path>
 
 						<path id="flanco3" d="M 1135 0 V 497 Z "
-							style="fill:none;fill-opacity:0.546618;stroke:#22e4cac7; "></path>
+							style="fill:none;fill-opacity:0.546618;stroke:#178879c7; "></path>
 
 					</g>
 
@@ -625,6 +687,87 @@
 
 				<input type="range" name="slider" id="slider" min="0" max="100" width="2000" value="0">
 				<script src="js/animReduction.js"></script>
+			</section>
+
+			<section data-auto-animate>
+				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
+					<div class="row">
+
+						<div class="col fragment">
+
+
+
+
+							<p data-id="rSetup" style="font-size: 30px;">
+								Restricción tiempo de setup
+								\[\begin{equation*}
+								T_c \geq t_{pcq} + t_{pd} + t_{setup}
+								\end{equation*}\]
+							</p>
+						</div>
+
+						<div class="col fragment">
+
+
+
+
+							<p data-id="rHold" style="font-size: 30px;">
+								Restricción tiempo de hold
+								\[\begin{equation*}
+								t_{ccq} + t_{cd} \geq t_{hold}
+								\end{equation*}\]
+							</p>
+						</div>
+
+
+
+
+			</section>
+
+			<section data-auto-animate>
+				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
+					<div class="row">
+
+						<div class="col fragment">
+
+							<p data-id="rSetup" style="font-size: 30px;">
+								Restricción tiempo de setup
+								\[\begin{equation*}
+								T_c \geq t_{pcq} + t_{pd} + t_{setup} +t_{skew}
+								\end{equation*}\]
+							</p>
+						</div>
+
+						<div class="col fragment">
+
+							<p data-id="rHold" style="font-size: 30px;">
+								Restricción tiempo de hold
+								\[\begin{equation*}
+								t_{ccq} + t_{cd} \geq t_{hold}+t_{skew}
+								\end{equation*}\]
+							</p>
+						</div>
+
+
+
+
+			</section>
+
+			<section>
+				<h3>¿Qué pasa si la entrada no viene de un flipflop?</h3>
+
+				<p class="fragment">Si una señal no está controlada por un reloj, es asíncrona.</p>
+				<p class="fragment">Si la entrada a un flipflop cambia durante su ventana de apertura, este entra en un estado metaestable.</p>
+			</section>
+
+			<section>
+				<p>La probabilidad de que en el tiempo t se haya resuelto la salida luego de violar la restricción de setup  queda  determinado por:</p>
+				<p  style="font-size: 30px;">
+					
+					\[\begin{equation*}
+					P(t > t_{res}) = \frac{T_0}{T_c}e^{-t/\tau}
+				\end{equation*}\]
+				</p>
 			</section>
 
 

@@ -53,7 +53,7 @@ function animate() {
 // Move obj element along path based on percentage of total length
 function moveObj(prcnt) {
   console.log(prcnt);
-  var newClock = 1.0 - 0.25 * prcnt / 100;
+  var newClock = 1.0 - 0.23 * prcnt / 100;
   console.log(newClock);
 
 
@@ -85,6 +85,11 @@ function moveObj(prcnt) {
   document.getElementById("apertura-2-0").setAttribute('x', flanco2X + delta);
   document.getElementById("apertura-2-1").setAttribute('x', flanco2X + delta);
   
+  var widthSlack=Math.max((flanco2X-30)-(flancoX + 340),0);
+  document.getElementById("tslack").setAttribute('x', flancoX + 320);
+  document.getElementById("tslack").setAttribute('width', widthSlack);
+  
+
   
   var bboxFlanco3 = flanco3.getBoundingClientRect();
   var flanco3X = svgPoint(flanco3.ownerSVGElement, bboxFlanco3.x, bboxFlanco3.y).x;
