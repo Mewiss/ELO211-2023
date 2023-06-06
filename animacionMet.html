@@ -154,11 +154,107 @@
 
 
 			<!-- Gráfico animado -->
+			<section data-background-iframe="./animacionTest.html#/5" data-background-interactive>				
+			</section>
+
+			<section data-auto-animate>
+				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
+					<div class="row">
+
+						<div class="col fragment">
+
+
+
+
+							<p data-id="rSetup" style="font-size: 30px;">
+								Restricción tiempo de setup
+								\[\begin{equation*}
+								T_c \geq t_{pcq} + t_{pd} + t_{setup}
+								\end{equation*}\]
+							</p>
+						</div>
+
+						<div class="col fragment">
+
+
+
+
+							<p data-id="rHold" style="font-size: 30px;">
+								Restricción tiempo de hold
+								\[\begin{equation*}
+								t_{ccq} + t_{cd} \geq t_{hold}
+								\end{equation*}\]
+							</p>
+						</div>
+
+
+
+
+			</section>
+
+			<section data-auto-animate>
+				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
+					<div class="row">
+
+						<div class="col fragment">
+
+							<p data-id="rSetup" style="font-size: 30px;">
+								Restricción tiempo de setup
+								\[\begin{equation*}
+								T_c \geq t_{pcq} + t_{pd} + t_{setup} +t_{skew}
+								\end{equation*}\]
+							</p>
+						</div>
+
+						<div class="col fragment">
+
+							<p data-id="rHold" style="font-size: 30px;">
+								Restricción tiempo de hold
+								\[\begin{equation*}
+								t_{ccq} + t_{cd} \geq t_{hold}+t_{skew}
+								\end{equation*}\]
+							</p>
+						</div>
+
+
+
+
+			</section>
+
 			<section>
-				<h3>Gráfico temporal entre sistemas secuenciales</h3>
-				<svg id="mysvg" stroke-width="5" vector-effect="non-scaling-stroke" viewBox="-0.5 -0.5 1134.529 506.85"
-					version="1.1" id="svg202" sodipodi:docname="C04Restricciones-Anim-reducir.svg"
-					inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+				<h3>¿Qué pasa si la entrada no viene de un flipflop?</h3>
+
+				<p class="fragment">Si una señal no está controlada por un reloj, es asíncrona.</p>
+				<p class="fragment">Si la entrada a un flipflop cambia durante su ventana de apertura, este entra en un
+					estado metaestable.</p>
+			</section>
+
+			<section>
+				<p>La probabilidad de que en el tiempo t se haya resuelto la salida luego de violar la restricción de
+					setup queda determinado por:</p>
+				<p style="font-size: 30px;">
+
+					\[\begin{equation*}
+					P(t > t_{res}) = \frac{T_0}{T_c}e^{-t/\tau}
+					\end{equation*}\]
+				</p>
+			</section>
+
+			<section class="Title" data-include> <!--Titulo-->
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+			<section>
+				Repaso Metaestabilidad
+			</section>
+
+			<!-- Gráfico animado Metaestabilidad-->
+			<section>
+				<h3>Gráfico temporal con entrada asíncrona</h3>
+				<svg id="svgMETA" stroke-width="5" vector-effect="non-scaling-stroke"
+					viewBox="-0.5 -0.5 1134.529 506.85" version="1.1" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
 					xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
 					xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
 					xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -183,11 +279,7 @@
 							id="apertura-2-1" width="74.785995" height="69.031998" x="626.2738" y="430" />
 					</g>
 
-					<rect
-						style="fill:#f6ff55;fill-opacity:0.75;   stroke:#969e09;  stroke-miterlimit:4.4;stroke-dasharray:none"
-						id="tslack" width="74.785995" height="50" x="400" y="350" />
-
-
+					
 
 
 					<polygon id="startChange1" points="405,200 395,165 405,130 705,130 715,165 705,200"
@@ -215,14 +307,7 @@
 
 					<g id="g2189" class="estableq" inkscape:label="estableq1" style="display:inline">
 
-						<!-- <path class="moveestableq3"
-							d="m 1619.9031,163.54266 -15.194,-33.764 -285.454,-0.539 -15.194,34.303 14.499,34.302 h 286.844 z"
-							style="fill:none;fill-opacity:0.546618;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none"
-							id="path38-0" />
-						<path class="moveestableq2"
-							d="m 1166.374,162.776 -15.194,-33.764 -285.454,-0.539 -15.194,34.303 14.499,34.302 h 286.844 z"
-							style="fill:none;fill-opacity:0.546618;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none"
-							id="path38" /> -->
+						
 
 						<path
 							d="m 2074.5994,163.31489 -15.194,-33.764 -285.454,-0.539 -15.194,34.303 14.499,34.302 h 286.844 z"
@@ -230,14 +315,7 @@
 							id="path38-0-6" />
 
 
-						<!-- <path class="moveestableq2"
-							d="m1166.374 459.825-15.194-33.764-285.454-.538-15.194 34.302 14.499 34.303h286.844z"
-							style="fill-opacity:0;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none"
-							id="path176" />
-						<path class="moveestableq3"
-							d="m 1619.5332,460.55434 -15.194,-33.764 -285.454,-0.538 -15.194,34.302 14.499,34.303 h 286.844 z"
-							style="fill:none;fill-opacity:0.546618;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none"
-							id="path176-2" /> -->
+						
 						<path
 							d="m 2066.6215,459.75034 -15.194,-33.764 -285.454,-0.538 -15.194,34.302 14.499,34.303 h 286.844 z"
 							style="fill:none;fill-opacity:0.546618;stroke:#6122e4;  stroke-miterlimit:4.4;stroke-dasharray:none"
@@ -683,151 +761,13 @@
 
 				</svg>
 
-				<input type="range" name="slider" id="slider" min="0" max="100" width="2000" value="0">
-				<script src="js/animReduction.js"></script>
-			</section>
-
-			<section data-auto-animate>
-				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
-					<div class="row">
-
-						<div class="col fragment">
-
-
-
-
-							<p data-id="rSetup" style="font-size: 30px;">
-								Restricción tiempo de setup
-								\[\begin{equation*}
-								T_c \geq t_{pcq} + t_{pd} + t_{setup}
-								\end{equation*}\]
-							</p>
-						</div>
-
-						<div class="col fragment">
-
-
-
-
-							<p data-id="rHold" style="font-size: 30px;">
-								Restricción tiempo de hold
-								\[\begin{equation*}
-								t_{ccq} + t_{cd} \geq t_{hold}
-								\end{equation*}\]
-							</p>
-						</div>
-
-
-
-
-			</section>
-
-			<section data-auto-animate>
-				<h4 data-id="title">Restricciones temporales para circuitos secuenciales</h6>
-					<div class="row">
-
-						<div class="col fragment">
-
-							<p data-id="rSetup" style="font-size: 30px;">
-								Restricción tiempo de setup
-								\[\begin{equation*}
-								T_c \geq t_{pcq} + t_{pd} + t_{setup} +t_{skew}
-								\end{equation*}\]
-							</p>
-						</div>
-
-						<div class="col fragment">
-
-							<p data-id="rHold" style="font-size: 30px;">
-								Restricción tiempo de hold
-								\[\begin{equation*}
-								t_{ccq} + t_{cd} \geq t_{hold}+t_{skew}
-								\end{equation*}\]
-							</p>
-						</div>
-
-
-
-
+				<input type="range" name="sliderMeta" id="sliderMeta" min="0" max="100" width="2000" value="0">
+				<script src="js/animMetaestabilidad.js"></script>
 			</section>
 
 			<section>
-				<h3>¿Qué pasa si la entrada no viene de un flipflop?</h3>
-
-				<p class="fragment">Si una señal no está controlada por un reloj, es asíncrona.</p>
-				<p class="fragment">Si la entrada a un flipflop cambia durante su ventana de apertura, este entra en un
-					estado metaestable.</p>
+				Sincronizadores
 			</section>
-
-			<section>
-				<p>La probabilidad de que en el tiempo t se haya resuelto la salida luego de violar la restricción de
-					setup queda determinado por:</p>
-				<p style="font-size: 30px;">
-
-					\[\begin{equation*}
-					P(t > t_{res}) = \frac{T_0}{T_c}e^{-t/\tau}
-					\end{equation*}\]
-				</p>
-			</section>
-
-			<section class="Title" data-include> <!--Titulo-->
-				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
-				<h2> Circuitos secuenciales</h2>
-				<p>Marie González-Inostroza</p>
-			</section>
-
-
-			<section>
-				<h3>Actividad en grupos </h3>
-				<img src="images/grupos.jpg"				>
-			</section>
-
-
-			<section>
-				<h3>Gráfico temporal con entrada asíncrona</h3>
-				<img src="images/C04Metaestabilidad.svg">
-			</section>
-
-			<section>
-				<p>La probabilidad de que en el tiempo t se haya resuelto la salida luego de violar la restricción de
-					setup queda determinado por:</p>
-				<p style="font-size: 30px;">
-
-					\[\begin{equation*}
-					P(t > t_{res}) = \frac{T_0}{T_c}e^{-t/\tau}
-					\end{equation*}\]
-				</p>
-			</section>
-
-			<section>
-				<h3>Sincronizadores
-				</h3>
-
-				<p class="fragment">
-
-					Una forma de evitar errores de metaestabilidad es poner un flipflop luego de la entrada asíncrona.
-
-
-				</p>
-
-
-				<p class="fragment" style="font-size: 30px;">
-
-					La probabilidad de que el sincronizador falle será
-
-					\[\begin{equation*}
-					P_{failure} = \frac{T_0}{T_c}e^{-(T_c-t_{setup})/\tau}
-					\end{equation*}\]
-				</p>
-			</section>
-
-
-			<section>
-				<h3>Gráfico temporal con entrada asíncrona</h3>
-				<img src="images/C04Sync.svg">
-			</section>
-
-			
 
 			<section>
 				<h4>El grupo A le comenta al B</h4>
@@ -852,29 +792,11 @@
 
 
 			<section>
-				<h3>Tiempo Medio Entre Fallas</h3>
-
-
-
-				<p class="fragment" style="font-size: 30px;">
-
-					
-
-					\[\begin{equation*}
-					MTBF= \frac{1}{P_{failure/sec}} = \frac{T_ce^\frac{T_c-t_{setup}}{\tau}}{NT_0}
-					\end{equation*}\]
-				</p>
+				Cálculo MTB
 			</section>
 
 			<section>
-				<h4> Cada grupo de proyecto</h4>
-				<ul>
-					<li>Para una de las entradas asíncronas y el Clock seleccionado, calculen el tiempo Medio Entre Fallas (MTBF)</li>
-					<li>¿Qué pasa al variar el clock?</li>
-					<li>¿Qué pasa al variar la probabilidad de los cambios de la entrada asíncrona?</li>
-					<li>Comparen con el otro grupo y anoten sus principales conclusiones</li>
-				</ul>
-				<countdown time="600" autostart="yes" />
+				20’ Actividad 2: calculan probabilidad de error en su sistema MTB
 			</section>
 
 		</div>
