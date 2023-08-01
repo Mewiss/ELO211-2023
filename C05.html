@@ -137,11 +137,11 @@
 						<p>No se puede cambiar la infomación.Se mantienen los datos al apagar el sistema</p>
 					</div>
 
-					
+
 				</div>
 			</section>
 
-			
+
 
 			<section>
 				<h3>Tipos de RAM</h3>
@@ -158,8 +158,8 @@
 				</div>
 			</section>
 
-			
-			
+
+
 
 			<section>
 				<h3>Tipos de RAM</h3>
@@ -188,7 +188,7 @@
 				<h4>En grupos de a 4, discutan:</h4>
 				<ul>
 					<li>¿Qué tipo de RAM es más rápida?</li>
-					<li>¿Cómo influye el tamaño de la RAM en la velocidad?</li>					
+					<li>¿Cómo influye el tamaño de la RAM en la velocidad?</li>
 					<li>¿Qué tipo de RAM usa más energía?</li>
 					<li>¿Cómo influye el tamaño en el gasto de energía?</li>
 					<li>¿Qué rol(es) puede tener la RAM en sus proyectos?</li>
@@ -239,6 +239,243 @@
 
 			</section>
 
+			<section>
+				<h3>Niveles de abstracción</h3>
+
+				<img class="r-stretch" src="images/C05/Abstraccion.png">
+
+			</section>
+
+
+
+			<section>
+				<h2>Introducción a la microarquitectura</h2>
+			</section>
+
+
+			<section>
+				<div class="row">
+					<div class="col fragment">
+						<h4>Arquitectura</h4>
+						<p>Visión de cómo funciona un computador</p>
+					</div>
+					<div class="col fragment">
+						<h4>Microarquitectura</h4>
+						<p>Cómo implementar una arquitectura en hardware</p>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section>
+				<h3>CPU: Central Processing Unit</h3>
+				<p>Interpreta instrucciones de un código mediante operaciones lógicas y aritméticas. </p>
+			</section>
+
+
+			<section>
+				<h3>MIPS: Microprocessor without Interlocked Pipeline Stages</h3>
+				<ul>
+					<li class="fragment">ALU</li>
+					<li class="fragment">Registros de estado
+						<ul>
+							<li class="fragment">PC: Program Counter</li>
+							<li class="fragment">Register file</li>
+							<li class="fragment">Instruction Memory</li>
+							<li class="fragment">Data Memory</li>
+						</ul>
+					</li>
+
+					<li class="fragment">Unidad de Control (CU)</li>
+
+				</ul>
+			</section>
+
+			<section>
+				<h3>ALU</h3>
+				<img class="r-stretch" src="images/C05/ALU.png">
+
+			</section>
+
+			<section>
+				<h3>ALU</h3>
+				<img class="r-stretch" src="images/C05/ALU2.png">
+			</section>
+
+			<section>
+				<h3>Estados en MIPS</h3>
+
+				<img class="r-stretch" src="images/C05/partesMIPS.png">
+
+			</section>
+
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 1: Fetch instruction</p>
+				<img class="r-stretch" src="images/C05/SC1.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 2: Read source operands from RF</p>
+				<img class="r-stretch" src="images/C05/SC2.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 3: Sign-extend the immediate
+				</p>
+				<img class="r-stretch" src="images/C05/SC3.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 4: Compute the memory address
+				</p>
+				<img class="r-stretch" src="images/C05/SC4.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 5: Read data from memory and write it back to register file
+				</p>
+				<img class="r-stretch" src="images/C05/SC5.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 6: Determine address of next instruction </p>
+				<img class="r-stretch" src="images/C05/SC6.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>STEP 6: Determine address of next instruction </p>
+				<img class="r-stretch" src="images/C05/SC7.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>Write data in rt to memory </p>
+				<img class="r-stretch" src="images/C05/SC8.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle</h4>
+				<p>Write ALUResult to register file </p>
+				<img class="r-stretch" src="images/C05/SC9.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Single-Cycle processor</h4>
+				<img class="r-stretch" src="images/C05/SC10.png">
+			</section>
+
+
+			<section>
+				<h4>En parejas, discutan:</h4>
+				<ul>
+					<li>¿Cuáles son las partes básicas de una CPU?</li>
+					<li>¿Cómo se realizan operaciones aritméticas en una CPU?</li>
+					<li>¿Cómo se guarda información en una CPU?</li>
+					<li>¿Qué tipo de memorias crees que puede utilizar una CPU?</li>
+				</ul>
+				<countdown time="300" autostart="yes" />
+			</section>
+
+
+
+
+
+
+
+
+			<section>
+				<h3>Pérformance de un procesador</h3>
+				<p>
+					Execution Time = (#instructions)(cycles/instruction)(seconds/cycle)				
+					
+				</p>
+
+			</section>
+
+			<section>
+				<h3>Limitaciones del Clock</h3>
+
+				<img class="r-stretch" src="images/C05/ClockCPU.png">
+				<p></p>
+			</section>
+			<section data-auto-animate>
+				<h4>Multi-Cycle processor</h4>
+				<img class="r-stretch" src="images/C05/MultiCPU.png">
+			</section>
+
+			<section data-auto-animate>
+				<h4>Clock en Multi-Cycle</h4>
+				<img class="r-stretch" src="images/C05/MultiClock.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h4>Pipelined Processor</h4>
+				<img class="r-stretch" src="images/C05/Pipelined.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h1>Arquitecturas Multi-core</h1>
+				
+			</section>
+
+			<section data-auto-animate>
+				<h5>Arquitecturas Multi-core</h5>
+				<h4>Intel Skylake COre I7</h4>
+				<img class="r-stretch" src="images/C05/intel.png">
+			</section>
+
+			<section data-auto-animate>
+				<h5>Arquitecturas Multi-core</h5>
+				<h4>Intel Skylake COre I7</h4>
+				<img class="r-stretch" src="images/C05/intel2.png">
+			</section>
+
+
+			<section data-auto-animate>
+				<h5>Arquitecturas Multi-core</h5>
+				<h4>GPU</h4>
+				<div class="row">
+					<div class="col fragment">
+						<img class="r-stretch" src="images/C05/gpu1.png">
+					</div>
+					<div class="col fragment">
+						<img class="r-stretch" src="images/C05/gpu2.png">
+					</div>
+				</div>
+				
+			</section>
+
+			<section>
+				<h4>En parejas, discutan:</h4>
+				<ul>
+					<li>¿Cómo cambia la pérformance de una CPU al tener múltiples core?</li>
+					<li>¿Qué hace más rápida a las GPUs?</li>
+				</ul>
+				<countdown time="300" autostart="yes" />
+			</section>
+
+
+			<section class="Title" data-include>
+				<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Tópicos Avanzados</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
 
 
 		</div>
