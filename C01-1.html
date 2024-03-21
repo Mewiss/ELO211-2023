@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Sistemas Numéricos</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+
+
+
+			<section>
+				<h6>Actividad 2.1.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li> Escribe tu nombre y el número de mes de tu cumpleaños + 10 </li>
+							<li> Utiliza el método de las restas y convierte el número a binario.</li>
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section>
+				<h6>Actividad 2.1.2: Parte grupal</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Revisen los resultados dentro de una fila </li>
+							<li>Doblen la hoja y escriban el número binario por afuera</li>
+							<li>Intercambien las hojas con otro grupo</li>
+
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h6>Actividad 2.2.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li> Al número recibido, súmale 101_2</li>
+							<li> Conviértelo a decimal</li>
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section>
+				<h6>Actividad 2.2.2: Parte grupal</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Revisen los resultados dentro de una fila </li>
+							<li>Doblen la hoja y escriban el número decimal por afuera</li>
+							<li>Intercambien las hojas con otro grupo</li>
+
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h6>Actividad 2.3.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li> Convierte el número recibido a binario con el método de las divisiones</li>
+							<li> Convierte el resultado a hexadecimal </li>
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section>
+				<h6>Actividad 2.3.2: Parte grupal</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Revisen los resultados dentro de una fila </li>
+							<li>Doblen la hoja y escriban el número hexadecimal por afuera</li>
+							<li>Intercambien las hojas con otro grupo</li>
+
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section>
+				<h6>Actividad 2.4.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li> Convierte el número recibido a binario y réstale 1111_2</li>
+							<li> Convierte el resultado a decimal </li>
+							<li> Devuelve la hoja al dueño original</li>
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section>
+				<h6>Actividad 2.4.2: Parte grupal</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Verifiquen que el resultado final coincide con el número inicial de cada hoja </li>
+							<li>¿Hay algún error? ¿Dónde ocurrió? </li>
+
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="360" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section>
+				<h6>Actividad 3.1: En grupos de a 2 o 3 personas </h6>
+
+				<div class="col">
+
+					<div class="row">
+						<p class="r-fit-text"> Completen la siguiente tabla con los cambios de base correspondientes</p>
+
+						<table class="tg">
+							<thead>
+								<tr>
+									<th class="tg-0lax">Decimal</th>
+									<th class="tg-0lax">Binario</th>
+									<th class="tg-0lax">Hexadecimal</th>
+									<th class="tg-0lax">BCD</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-0lax">27</td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax">10000</td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax">5</td>
+									<td class="tg-0lax"></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax">No llenar</td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax">C1BE</td>
+									<td class="tg-0lax">No llenar</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax">10101</td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax"></td>
+									<td class="tg-0lax">00110001<br></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
+					<div class="row">
+						<countdown time="660" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h1>Representaciones de números negativos</h1>
+			</section>
+
+			<section>
+				<h6>Complemento de 1</h6>
+				<div class="row">
+					<div class="col fragment">
+						\[\begin{equation*}
+						\color{black}8_{10}=\color{blue}0\color{black}0110_{c1}
+						\end{equation*}\]
+					</div>
+					<div class="col fragment">
+						\[\begin{equation*}
+						\color{black}-8_{10}=\color{blue}1\color{black}1001_{c1}
+						\end{equation*}\]
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+				<h6>Complemento de 2</h6>
+				<div class="col">
+					<div class="row fragment">
+						\[\begin{equation*}
+						\color{black}8_{10}=\color{blue}0\color{black}0110_{c2}
+						\end{equation*}\]
+					</div>
+					<div class="row fragment">
+						\[\begin{equation*}
+						\color{black}-8_{10}=\color{blue}1\color{black}1001_{c1}+1=11010_{c2}
+						\end{equation*}\]
+					</div>
+				</div>
+
+			</section>
+
+
+			<section>
+				<h6>Actividad 2.5: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Realiza la resta de la actividad 2 utilizando complemento de 2</li>
+							<li>Verifica tu resultado</li>
+
+						</ul>
+
+					</div>
+
+					<div class="row">
+						<countdown time="360" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Sistemas Numéricos</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			slideNumber: true,
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 0.8,
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
+			countdown: { defaultTime: 300, autostart: true },
+
+
+			autoAnimateUnmatched: true
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>

@@ -410,6 +410,7 @@ section.has-dark-background h6 {
   flex-direction: row;
   max-width: 90%;
   align-items: center;
+  align-content: center;
 }
 
 .col {
@@ -418,6 +419,7 @@ section.has-dark-background h6 {
   flex: 1;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   max-width: 85%;
 }
 /*
