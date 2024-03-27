@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Álgebra Booleana</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+			<section>
+				<h6>Álgebra booleana</h6>
+				<p>Rama del álgebra en que las variables sólo pueden tomar dos valores: verdadero o falso. Estos pueden
+					representarse como V/F, T/F o 1/0.
+				</p>
+			</section>
+
+			<section>
+				<h6>Operaciones fundamentales del álgebra booleana</h6>
+				<div class="row">
+					<div class="col fragment">
+						<img src="images/C01/NOT.png">
+						<h6>NOT</h6>
+					</div>
+
+					<div class="col fragment">
+						<img src="images/C01/AND.png">
+						<h6>AND</h6>
+					</div>
+
+
+					<div class="col fragment">
+						<img src="images/C01/OR.png">
+						<h6>OR</h6>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h6>Ejemplo</h6>
+				<p>Escribe la tabla de verdad de la expresión algebraica (A+B)(~(AB))
+				</p>
+			</section>
+
+
+			<section>
+				<h6>Actividad 5.1.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p>Crea una expresión algebraica y la tabla de verdad para la variable V=“Debo ir a la
+							Universidad”. Considera como entradas S=“Es día de semana” y F=”Es feriado”
+						</p>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h6>Actividad 5.1.2: En parejas</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p>Crea una expresión algebraica y la tabla de verdad para la variable V=“Debo ir a la
+							Universidad”. Considera como entradas S=“Es día de semana” y F=”Es feriado”
+						</p>
+
+
+
+					</div>
+
+					<div class="row">
+						<h6>¡Comparen!</h6>
+						<countdown time="90" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section>
+				<h6>Actividad 5.2.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p>Un sistema de comunicación envía mensajes de 4 bits con datos y un bit de paridad. Escribe la
+							tabla de verdad para el bit de paridad.
+
+						</p>
+
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h6>Actividad 5.2.2: En parejas</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p>Un sistema de comunicación envía mensajes de 4 bits con datos y un bit de paridad. Escribe la
+							tabla de verdad para el bit de paridad.
+
+						</p>
+
+
+
+					</div>
+
+					<div class="row">
+						<h6>¡Comparen!</h6>
+						<countdown time="90" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section>
+				<h6>Actividad 5.3.1: Parte individual</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p> Obtén la expresión algebraica y la tabla de verdad del siguiente circuito </p>
+						<img src="images/C01/circuitoBoolean.png">
+					</div>
+
+					<div class="row">
+						<countdown time="120" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+
+			<section>
+				<h6>Actividad 5.3.2: En parejas</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p> Obtén la expresión algebraica y la tabla de verdad del siguiente circuito </p>
+						<img src="images/C01/circuitoBoolean.png">
+					</div>
+
+					<div class="row">
+						<h6>¡Comparen!</h6>
+						<countdown time="90" autostart="yes"></countdown>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Álgebra Booleana</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Diseño top-down</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+			<section>
+				<h6>Diseño Top-down</h6>
+				<p> Estrategia de diseño que parte desde la descripción general del sistema para luego ir definiendo
+					bloques funcionales de alto nivel que se van detallando hasta realizar una implementación final.</p>
+			</section>
+
+			<section>
+				<div class="row">
+					<div class="col fragment">
+						<h6>Diseño Top-down</h6>
+						<ul>
+							<li> Comienza con una visión general del sistema</li>
+							<li> Desciende a niveles de detalle más bajos.</li>
+						</ul>
+					</div>
+
+					<div class="col fragment">
+						<h6>Diseño Bottom-up-down</h6>
+						<ul>
+							<li> Comienza desde los detalles </li>
+							<li> Asciende hacia una visión general.</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+
+
+
+			<section>
+				<h6>Pasos del diseño Top-down</h6>
+				<ul>
+					<li class="fragment">Definir requerimientos del sistema.</li>
+					<li class="fragment">Definir módulos funcionales.</li>
+					<li class="fragment">Diseño detallado de cada módulo.</li>
+					<li class="fragment">Implementación y pruebas de los módulos.</li>
+					<li class="fragment">Integración de los módulos en el sistema completo.</li>
+				</ul>
+
+			</section>
+
+			<section>
+				<h6>Ventajas diseño Top-down</h6>
+				<ul>
+					<li class="fragment">Visión general clara</li>
+					<li class="fragment">Modularidad</li>
+					<li class="fragment">Acelera la identificación de problemas</li>
+					<li class="fragment">Mantenible</li>
+					<li class="fragment">Eficiente</li>
+				</ul>
+
+			</section>
+
+			<section>
+				<h6>Actividad 6: En grupos de proyecto</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<ul>
+							<li>Graficar el diagrama de alto nivel de sus proyectos</li>
+							
+							<li>Identificar al menos un bloque que pueda corresponder a una expresión lógica. </li>
+								<li>Escribir una expresión que represente la operación del bloque. Indique qué representan sus entradas y salidas.</li>
+
+						</ul>
+					</div>
+
+					<div class="row">
+						
+						<countdown time="900" autostart="yes"></countdown>
+					</div>
+				</div>
+			</section>
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Diseño top-down</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+			
+
+
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			slideNumber: true,
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 0.8,
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
+			countdown: { defaultTime: 300, autostart: true },
+
+
+			autoAnimateUnmatched: true
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
