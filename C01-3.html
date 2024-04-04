@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Álgebra Booleana - parte 2</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+			<section>
+				<h6>ÍNDICE</h6>
+				<ul>
+					<li><a href="C01-1.html">Sistemas Numéricos</a></li>
+					<li><a href="C01-2.html">Álgebra Booleana</a></li>
+
+				</ul>
+
+			</section>
+
+			<section>
+				<div class="row">
+					<div class="col fragment">
+						<h6>Minitérmino </h6>
+						<ul>
+							<li> producto que incluye un literal por cada entrada de una función
+							</li>
+							<li> Ej: Para entradas A y B, los posibles minitérminos son $AB$, $A\bar{B}$, $\bar{A}B$ y
+								$\bar{A}\bar{B}$
+							</li>
+						</ul>
+					</div>
+
+					<div class="col fragment">
+						<h6>Maxitérmino: </h6>
+						<ul>
+							<li> Suma que incluye un literal por cada entrada de una función
+							</li>
+							<li> Ej: Para entradas A y B, los posibles maxitérminos son $A+B$, $A+\bar{B}$, $\bar{A}+B$
+								y $\bar{A}+\bar{B}$
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+
+
+
+			<section>
+				<h6>Representaciones canónicas</h6>
+				<p>Cualquier función booleana (o su tabla de verdad) puede ser expresada en sus formas canónicas, que
+					corresponde a sumas de sus minitérminos o productos de sus maxitérminos
+				</p>
+
+				<div class="row">
+					<div class="col fragment">
+						<h6>Suma de productos (SoP) </h6>
+						<p>Sumas de minitérminos </p>
+					</div>
+
+					<div class="col fragment">
+						<h6>Productos de sumas (PoS) </h6>
+						<p>Producto de maxitérminos </p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h6>Ejemplo: Obtención de SoP mediante tabla de verdad</h6>
+				<p>Determina una representación SoP que sea dual a la expresión algebraica $(A+B)\overline{(AB)}$</p>
+			</section>
+
+			<section>
+				<h6>Ejemplo: Obtención de PoS mediante tabla de verdad</h6>
+				<p>Determina una representación PoS que sea dual a la expresión algebraica $(A+B)\overline{(AB)}$</p>
+			</section>
+
+			<section>
+				<h6>Forma reducida de los Minitérminos</h6>
+
+				<table class="tg">
+					<thead>
+						<tr>
+							<th class="tg-c3ow">A</th>
+							<th class="tg-c3ow">B</th>
+							<th class="tg-c3ow">C</th>
+							<th class="tg-c3ow">Minitérminos</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$\bar{A}\bar{B}\bar{C} =m_0$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$\bar{A}\bar{B}C =m_1$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$\bar{A}B\bar{C} =m_2$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$\bar{A}BC =m_3$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$A\bar{B}\bar{C} =m_4$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$A\bar{B}C =m_5$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$AB\bar{C} =m_6$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$ABC =m_7$</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section>
+				<h6>Forma reducida de los maxitérminos</h6>
+
+				<table class="tg">
+					<thead>
+						<tr>
+							<th class="tg-c3ow">A</th>
+							<th class="tg-c3ow">B</th>
+							<th class="tg-c3ow">C</th>
+							<th class="tg-c3ow">Maxitérminos</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$A+B+C =M_0$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$A+B+\bar{C} =M_1$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$A+\bar{B}+C =M_2$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$A+\bar{B}+\bar{C} =M_3$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$\bar{A}+B+C =M_4$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$\bar{A}+B+\bar{C} =M_5$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">0</td>
+							<td class="tg-c3ow">$\bar{A}+\bar{B}+C =M_6$</td>
+						</tr>
+						<tr>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">1</td>
+							<td class="tg-c3ow">$\bar{A}+\bar{B}+\bar{C} =M_7$</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</section>
+
+
+			<!-- Actividad 7: SoP y PoS -->
+			<section>
+				<section>
+					<h2>Actividad 7</h2>
+					<h6>Representaciones canónicas</h6>
+					<h3>En parejas</h3>
+				</section>
+				<section>
+					<h6>Actividad 7.1</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Escriban en la hoja la expresión booleana directamente implementada en el circuito.
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="120" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h6>Actividad 7.2</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								A partir de la tabla de verdad del circuito, obtenga una expresión dual a partir de la
+								representación como suma de productos (SoP).
+								En el reverso de la hoja, escriba la expresión como SoP y dibuje el circuito
+								correspondiente.
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="180" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+				<section>
+					<h6>Actividad 7.3</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								A partir de la tabla de verdad del circuito, obtenga una expresión dual a partir de la
+								representación como producto de sumas (PoS).
+								En la hoja, escriba la expresión como PoS y dibuje el circuito correspondiente.
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="180" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+			</section>
+
+			<!-- Propiedades del álgebra booleana-->
+			<section>
+				<section>
+					<h6>Propiedades del álgebra booleana</h6>
+
+				</section>
+
+				<section>
+					<h6>Axiomas booleanos</h6>
+
+
+					<table class="tg">
+						<thead>
+							<tr>
+								<th class="tg-c3ow">$A = 0$ Si $A\neq 1$</th>
+								<th class="tg-c3ow">$A = 1$ Si $A\neq 0$</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tg-c3ow">$\bar{0} = 1$</td>
+								<td class="tg-c3ow">$\bar{1} = 0$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$0 \cdot 0 =0$</td>
+								<td class="tg-c3ow">$0 +0 =0$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$1 \cdot 1 =1$</td>
+								<td class="tg-c3ow">$1 +1 =1$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$0 \cdot 1 =1\cdot 0 = 0$</td>
+								<td class="tg-c3ow">$1 + 0 =0+1=1$</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</section>
+
+				<section>
+
+					<h6>Teoremas Booleanos</h6>
+
+					<table class="tg">
+						<thead>
+							<tr>
+								<th class="tg-c3ow">$A \cdot 0 =0$</th>
+								<th class="tg-c3ow">$A +0 =A$</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tg-c3ow">$A \cdot 1 =A$</td>
+								<td class="tg-c3ow">$A +1 =1$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$A \cdot A =A$</td>
+								<td class="tg-c3ow">$A +A =A$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$A \cdot \bar{A} =0$</td>
+								<td class="tg-c3ow">$A +\bar{A} =1$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$\bar{\bar{A}} =A$</td>
+								<td class="tg-c3ow"></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+
+					<h6>Teoremas Booleanos</h6>
+
+					<table class="tg">
+						<thead>
+							<tr>
+								<th class="tg-c3ow">$A \cdot 0 =0$</th>
+								<th class="tg-c3ow">$A +0 =A$</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td class="tg-c3ow">$A \cdot B = B\cdot A$</td>
+								<td class="tg-c3ow">$A +B = B+A$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$(A\cdot B)\cdot C = A \cdot (B\cdot C)$</td>
+								<td class="tg-c3ow">$(A+B)+C=A+(B+C)$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$A\cdot B+A\cdot C = A\cdot(B+C)$</td>
+								<td class="tg-c3ow">$(A+B)\cdot(A+C)=A+(B\cdot C)$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$A\cdot (A+B)=A$</td>
+								<td class="tg-c3ow">$A+AB=A$</td>
+							</tr>
+							<tr>
+								<td class="tg-c3ow">$A\cdot B+A\cdot\bar{B} = A$</td>
+								<td class="tg-c3ow">$(A+B) \cdot (A+\bar{B})=A$</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h6>Teorema de De Morgan</h6>
+
+					<table class="tg">
+						<thead>
+							<tr>
+								<td class="tg-c3ow">$\overline{A \cdot B } = \bar{A}+\bar{B}$</td>
+								<td class="tg-c3ow">$ \overline{A + B } = \bar{A}\cdot \bar{B}$</td>
+							</tr>
+						</thead>
+					</table>
+				</section>
+			</section>
+			<!-- Actividad 8: Reducción de términos mediante propiedades -->
+			<section>
+				<section>
+					<h2>Actividad 8</h2>
+					<h6>Reducción de términos mediante propiedades</h6>
+					<h3>Busquen a la pareja con el mismo número de circuito</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 8.1</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Para cada expresión (SoP y PoS), apliquen las propiedades de la lógica booleana para
+								obtener una
+								expresión dual con la menor cantidad de términos posible.
+
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+
+				<section>
+					<h6>Actividad 8.2</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Dibujen cada uno de los circuitos
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="120" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+
+				<section>
+					<h6>Actividad 8.3</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Discutan:
+							</p>
+							<ul>
+								<li>¿Qué circuito creen que es mejor?</li>
+								<li>¿Cómo lograron disminuir la cantidad de términos?</li>
+							</ul>
+						</div>
+
+						<div class="row">
+							<countdown time="300" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+
+			</section>
+
+			<section>
+				<section>
+					<h6>Mapas de Karnaugh</h6>
+				</section>
+
+				<section>
+					<h6>Mapas de Karnaugh</h6>
+					<p> Es un algoritmo que nos permite obtener a una versión reducida de dos niveles lógicos de
+						cualquier expresión booleana.</p>
+				</section>
+
+				<section>
+
+					<div class="row">
+						<div class="col">
+							<h6>Tabla de verdad</h6>
+
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-c3ow">A</th>
+										<th class="tg-c3ow">B</th>
+										<th class="tg-c3ow">C</th>
+										<th class="tg-c3ow">F</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_0$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_1$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_2$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_3$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_4$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_5$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_6$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_7$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="col">
+							<h6>Mapa de Karnaugh</h6>
+							<table>
+								<thead>
+									<tr>
+										<td>A\BC</td>
+										<td>00</td>
+										<td>01</td>
+										<td>11</td>
+										<td>10</td>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<td>0</td>
+										<td>$F_0$<br></td>
+										<td>$F_1$</td>
+										<td>$F_3$</td>
+										<td>$F_2$</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>$F_4$<br></td>
+										<td>$F_5$<br></td>
+										<td>$F_7$</td>
+										<td>$F_6$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Ejemplo: Obtención de expresión reducida mediante mapa de Karnaugh</h6>
+					<div class="row">
+						<div class="col">
+							<p>Determina una expresión reducida utilizando un mapa de Karnaugh para la siguiente tabla
+								de verdad</p>
+						</div>
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-c3ow">A</th>
+										<th class="tg-c3ow">B</th>
+										<th class="tg-c3ow">C</th>
+										<th class="tg-c3ow">F</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script src="node_modules/reveal.js-menu/menu.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			slideNumber: true,
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 0.8,
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate, RevealMenu],
+			countdown: { defaultTime: 300, autostart: true },
+
+
+			autoAnimateUnmatched: true,
+
+			menu: {
+				// ...
+
+				custom: [
+					{
+						title: 'Indice Capítulo',
+						icon: '<i class="fa fa-external-link">',
+						src: '/'
+					}
+				]
+			}
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
