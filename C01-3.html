@@ -762,7 +762,6 @@
 	<script src="plugin/animate/plugin.js"></script>
 	<script src="plugin/animate/svg.min.js"></script>
 	<script src="plugin/math/math.js"></script>
-	<script src="node_modules/reveal.js-menu/menu.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -783,23 +782,13 @@
 			},
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate, RevealMenu],
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
 			countdown: { defaultTime: 300, autostart: true },
 
 
 			autoAnimateUnmatched: true,
 
-			menu: {
-				// ...
-
-				custom: [
-					{
-						title: 'Indice Capítulo',
-						icon: '<i class="fa fa-external-link">',
-						src: '/'
-					}
-				]
-			}
+			
 
 		});
 
