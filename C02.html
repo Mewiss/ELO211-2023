@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2>Capítulo 2: Circuitos combinacionales</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+			<section>
+				<h6>ÍNDICE</h6>
+				<ul>
+					<li><a href="C01-1.html">Sistemas Numéricos</a></li>
+					<li><a href="C01-2.html">Álgebra Booleana</a></li>
+
+				</ul>
+
+			</section>
+			<section>
+
+			</section>
+
+
+
+			<section>
+				<section>
+					<h6>Mapas de Karnaugh</h6>
+				</section>
+
+				<section>
+					<h6>Mapas de Karnaugh</h6>
+					<p> Es un algoritmo que nos permite obtener a una versión reducida de dos niveles lógicos de
+						cualquier expresión booleana.</p>
+				</section>
+
+				<section>
+
+					<div class="row">
+						<div class="col">
+							<h6>Tabla de verdad</h6>
+
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-c3ow">A</th>
+										<th class="tg-c3ow">B</th>
+										<th class="tg-c3ow">C</th>
+										<th class="tg-c3ow">F</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_0$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_1$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_2$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_3$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_4$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_5$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">$F_6$</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">$F_7$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="col">
+							<h6>Mapa de Karnaugh</h6>
+							<table>
+								<thead>
+									<tr>
+										<td>A\BC</td>
+										<td>00</td>
+										<td>01</td>
+										<td>11</td>
+										<td>10</td>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<td>0</td>
+										<td>$F_0$<br></td>
+										<td>$F_1$</td>
+										<td>$F_3$</td>
+										<td>$F_2$</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>$F_4$<br></td>
+										<td>$F_5$<br></td>
+										<td>$F_7$</td>
+										<td>$F_6$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Ejemplo: Obtención de expresión reducida mediante mapa de Karnaugh</h6>
+					<div class="row">
+						<div class="col">
+							<p>Determina una expresión reducida utilizando un mapa de Karnaugh para la siguiente tabla
+								de verdad</p>
+						</div>
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-c3ow">A</th>
+										<th class="tg-c3ow">B</th>
+										<th class="tg-c3ow">C</th>
+										<th class="tg-c3ow">F</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+										<td class="tg-c3ow">1</td>
+									</tr>
+									<tr>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">1</td>
+										<td class="tg-c3ow">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+			<section>
+
+				<section>
+					<h2>Actividad 9</h2>
+					<h6>Reducción de términos mediante mapas de Karnaugh</h6>
+					<h3>Trabajo individual</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 9.1: Actividad individual</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Plantee el mapa de Karnaugh para un sistema que recibe un número binario de 4 bits y que
+								su salida es 1 para los múltiplos de 2 (no considere el 0 como múltiplo de 2).
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h6>Actividad 9.2: Actividad individual</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Resuelva el mapa de Karnaugh planteado.
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h6>Actividad 9.3: Actividad individual</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Dibuje el circuito asociado a la expresión obtenida.
+							</p>
+
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+			</section>
+			<section>
+				<section>
+					<h6>Don't cares</h6>
+					<p>En una tabla de verdad o mapa de Karnaugh, un don’t care (x) representa una salida que no es
+						relevante, es decir, puede tomar valor 0 ó 1.
+					</p>
+				</section>
+
+				<section>
+					<h6>Ejemplo: Uso de don't cares en mapa mapa de Karnaugh</h6>
+					<p>
+						Plantee el mapa de Karnaugh para un sistema que recibe un número binario de 4 bits que
+						representa los meses de enero a diciembre y que su salida es 1 si el mes tiene 31 días.
+					</p>
+				</section>
+			</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			slideNumber: true,
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 0.8,
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
+			countdown: { defaultTime: 300, autostart: true },
+
+
+			autoAnimateUnmatched: true,
+
+
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
