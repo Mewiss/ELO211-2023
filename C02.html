@@ -360,11 +360,448 @@
 						representa los meses de enero a diciembre y que su salida es 1 si el mes tiene 31 días.
 					</p>
 				</section>
+
+				<section>
+					<h6>Display 7-segmentos</h6>
+					<img src="images/C02/7-seg.png">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Actividad 10</h2>
+					<h6>Mapas de Karnaugh con don't cares</h6>
+					<h3>En grupos de a 4 personas</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 10.1: Actividad grupal</h6>
+
+					<div class="row">
+
+						<div class="col">
+
+							<div class="row center">
+								<p>
+									Diseñe un circuito mediante mapas de Karnaugh que reciba un número BCD de 4 bits
+									y prenda un display 7 segmentos para representar el valor.
+
+								</p>
+
+							</div>
+
+							<div class="row">
+								<countdown time="600" autostart="yes"></countdown>
+							</div>
+
+						</div>
+						<div class="col">
+							<img src="images/C02/7-seg-diagrama.png">
+						</div>
+					</div>
+				</section>
 			</section>
 
+			<section>
+				<section>
+					<h6>Buble pushing</h6>
+				</section>
+				<section>
+					<div class="col">
+						<div class="row">
+							<h6>Buble pushing</h6>
+						</div>
+						<div class="row fragment">
+							<table class="tg">
+								<thead>
+									<tr>
+										<td class="tg-c3ow">$\overline{A \cdot B } = \bar{A}+\bar{B}$</td>
+										<td class="tg-c3ow">$ \overline{A + B } = \bar{A}\cdot \bar{B}$</td>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="row">
+							<div class="col fragment">
+								<img src="images/C02/bublepushing-nand.png">
+							</div>
+
+							<div class="col fragment">
+								<img src="images/C02/bublepushing-nor.png">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="col">
+						<div class="row">
+							<h6>Buble pushing</h6>
+						</div>
+						<div class="row">
+							<img src="images/C02/bublepushing-circuit.png">
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Actividad 11</h2>
+					<h6>Buble pushing</h6>
+					<h3>Actividad individual y en parejas</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 11.1: Actividad individual</h6>
+
+
+					<div class="col">
+
+						<div class="row">
+							<p>
+								Un circuito recibe la entrada de un dado representado como número binario. Una de
+								sus salidas indica si el número es múltiplo de 3, mientras la otra indica si el
+								número es 1 ó 6.
+							</p>
+						</div>
+
+						<div class="row">
+							<ul>
+								<li>Determine las entradas y salidas </li>
+								<li>Escriba la tabla de verdad </li>
+								<li>Diseñe el circuito aplicando mapas de Karnaugh con don’t cares</li>
+							</ul>
+
+						</div>
+
+						<div class="row">
+							<countdown time="300" autostart="yes"></countdown>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section>
+					<h6>Actividad 11.2: Actividad en parejas</h6>
+
+
+					<div class="col">
+
+						<div class="row">
+							<p>
+								Se han acabado las compuertas OR y AND.
+								Modifiquen el circuito para que este funcione sólo con compuertas negadas
+
+							</p>
+						</div>
 
 
 
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section>
+					<h6>Actividad 11.2: Actividad en parejas</h6>
+
+
+					<div class="col">
+
+						<div class="row">
+							<p>
+								Por su facilidad de fabricación, algunas FPGA sólo cuentan con compuertas NAND
+								Modifiquen el circuito inicial para que este pueda ser sintetizado en una FPGA con
+								dichas características.
+
+
+							</p>
+						</div>
+
+
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h6>Otros circuitos combinacionales</h6>
+				</section>
+
+				<section>
+					<h6>Buffer</h6>
+					<img src="images/C02/buffer.png">
+				</section>
+
+
+				<section>
+					<h6>Tristate Buffer</h6>
+					<img src="images/C02/tristatebuffer.png">
+				</section>
+
+				<section>
+					<h6>Pregunta ¿?</h6>
+					<div class="col">
+						<div class="row">
+							<p>¿Cuál será la salida de cada circuito si In=0, En=0?
+							</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="images/C02/tristate-pregunta.png">
+							</div>
+							<div class="col">
+								<ol type="A">
+									<li>1 y 1</li>
+									<li>1 y Z</li>
+									<li>0 y Z</li>
+									<li>0 y 0</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h6>Multiplexor</h6>
+					<div class="row">
+						<div class="col">A partir de las entradas de selección, se determina cuál es la entrada que se
+							conecta a la salida
+						</div>
+						<div class="col fragment"><img src="images/C02/mux-2ins.png"></div>
+						<div class="col fragment"><img src="images/C02/mux-3sel.png"></div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Pregunta ¿?</h6>
+					<div class="col">
+						<div class="row">
+							¿Cuál será la salida de este circuito si A=0, B=1 y C=0?
+
+							</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="images/C02/mux-pregunta1.png">
+							</div>
+							<div class="col">
+								<ol type="A">
+									<li>0</li>
+									<li>1</li>
+									<li>Z</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Pregunta ¿?</h6>
+					<div class="col">
+						<div class="row">
+							¿Cuál será la salida de este circuito si A=0, B=1 y C=0?
+
+							</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="images/C02/mux-pregunta2.png">
+							</div>
+							<div class="col">
+								<ol type="A">
+									<li>0</li>
+									<li>1</li>
+									<li>Z</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Pregunta ¿?</h6>
+					<div class="col">
+						<div class="row">
+							¿Cuál será la salida de este circuito si A=0, B=0 y C=1?
+
+							</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="images/C02/mux-pregunta1.png">
+							</div>
+							<div class="col">
+								<ol type="A">
+									<li>0</li>
+									<li>1</li>
+									<li>Z</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Decodificador</h6>
+					<div class="row">
+						<div class="col"><img src="images/C02/deco.png"></div>
+						<div class="col">
+							<p>Implementan cada uno de los minitérminos asociados a sus entradas
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Pregunta ¿?</h6>
+					<div class="col">
+						<div class="row">
+							¿Cuál será la salida de este circuito si A=1, B=0 y C=1?
+
+							</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="images/C02/deco-pregunta.png">
+							</div>
+							<div class="col">
+								<ol type="A">
+									<li>0</li>
+									<li>1</li>
+									<li>Z</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h6>Diseño con multiplexores y decodificadores</h6>
+				</section>
+
+
+				<section>
+					<h6>Diseño con multiplexores y decodificadores</h6>
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-mux.png">
+						</div>
+						<div class="col">
+							<p>Cualquier función lógica puede sintetizarse usando multiplexores y decodificadores.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h6>Diseño con multiplexores y decodificadores</h6>
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-mux.png">
+						</div>
+						<div class="col">
+							<p> Con multiplexor 8:1</p>
+							<img src="images/C02/mux-3sel.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Diseño con multiplexores y decodificadores</h6>
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-mux.png">
+						</div>
+						<div class="col">
+							<p> Con multiplexor 8:1</p>
+							<img src="images/C02/mux-2ins.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Diseño con multiplexores y decodificadores</h6>
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-mux.png">
+						</div>
+						<div class="col">
+							<p> Con multiplexor 8:1</p>
+							<img src="images/C02/deco.png">
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Actividad 12</h2>
+					<h6>Diseño con multiplexores y decodificadores </h6>
+					<h3>Actividad en parejas</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 12.1: Actividad en parejas</h6>
+
+
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-actividad.png">
+							<countdown time="210" autostart="yes"></countdown>
+						</div>
+						<div class="col">
+							<p> Diseña distintos circuitos que equivalgan a esta tabla de verdad en base a un
+								multiplexor 8:1</p>
+
+						</div>
+					</div>
+				</section>
+
+				
+				<section>
+					<h6>Actividad 12.2: Actividad en parejas</h6>
+
+
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-actividad.png">
+							<countdown time="210" autostart="yes"></countdown>
+						</div>
+						<div class="col">
+							<p> Diseña distintos circuitos que equivalgan a esta tabla de verdad en base a un
+								multiplexor 4:1</p>
+
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Actividad 12.2: Actividad en parejas</h6>
+
+
+					<div class="row">
+						<div class="col">
+							<img src="images/C02/dis-actividad.png">
+							<countdown time="210" autostart="yes"></countdown>
+						</div>
+						<div class="col">
+							<p> Diseña distintos circuitos que equivalgan a esta tabla de verdad en base a un
+								decodificador 3:8</p>
+
+						</div>
+					</div>
+				</section>
+
+				
+			</section>
 
 		</div>
 	</div>
