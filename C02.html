@@ -765,7 +765,7 @@
 					</div>
 				</section>
 
-				
+
 				<section>
 					<h6>Actividad 12.2: Actividad en parejas</h6>
 
@@ -800,11 +800,174 @@
 					</div>
 				</section>
 
-				
+
 			</section>
 
+
+			<section>
+				<section data-auto-animate>
+					<h1>Análisis temporal de circuitos combinacionales</h1>
+				</section>
+
+
+				<section>
+					<h6>Retardos</h6>
+					<div class="col">
+
+						<div class="row">
+							<div class="col r-fit-text">
+								<p> <b>Delay de propagación $t_{p_d}$</b>
+								</p>
+								<p>Tiempo máximo entre que un cambio en la entrada produce un cambio
+									estable en la salida
+								</p>
+							</div>
+							<div class="col r-fit-text">
+								<p> <b>Delay de contaminación $t_{c_d}$</b>
+								</p>
+								<p>Tiempo mínimo para que un cambio en la entrada produzca un cambio
+									inestable en la salida
+								</p>
+							</div>
+
+						</div>
+						<div class="row">
+							<img class="r-stretch" src="images/C02/retardos.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Retardos en circuitos combinacionales</h6>
+					<div class="col">
+
+						<div class="row">
+							<div class="col r-fit-text">
+								<p> <b>Delay de propagación $t_{p_d}$:</b> 
+									Suma de los $t_{p_d}$ del critical path (camino más largo) </p>
+							</div>
+							<div class="col r-fit-text">
+								<p> <b>Delay de contaminación $t_{c_d}$:</b>
+									Suma de los $t_{c_d}$ del shortest path (camino más corto) </p>
+							</div>
+						</div>
+						<div class="row">
+							<img class="r-stretch" src="images/C02/criticalpath.png">
+						</div>
+					</div>
+				</section>
+
+
+
+
+
+
+				<section>
+					<h2>Actividad 13</h2>
+					<h6> Cálculo delays de propagación y contaminación</h6>
+					<h3>Trabajo individual</h3>
+				</section>
+
+				<section>
+					<h6>Actividad 13.1: Actividad individual</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p class="r-fit-text">
+								Para el siguiente circuito, calcula los tiempos de propagación y contaminación de cada
+								camino. Considera que los tiempos de contaminación y propagación de cada compuerta son
+								50ps
+								y 100ps
+							</p>
+						</div>
+
+						<div class="row">
+							<img src="images/C02/caminos.png">
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h6>Actividad 13.2: Actividad individual</h6>
+
+					<div class="col">
+
+						<div class="row center">
+							<p>
+								Determina cuál es el delay de contaminación y el de propagación
+							</p>
+						</div>
+
+						<div class="row">
+							<img src="images/C02/caminos.png">
+						</div>
+
+						<div class="row">
+							<countdown time="240" autostart="yes"></countdown>
+						</div>
+
+					</div>
+				</section>
+
+			</section>
+			<section>
+				<h6>Glitches</h6>
+				<p>Error en el comportamiento de un circuito en ciertos cambios de las entradas.
+					Debemos evitarlos (pero no a toda costa)
+				</p>
+				<img src="images/C02/glitch.png">
+			</section>
+
+			<section>
+				<h2>Actividad 14</h2>
+				<h6> Identificación de glitches</h6>
+				<h3>Trabajo en parejas</h3>
+			</section>
+
+			<section>
+				<h6>Actividad 14.1: Actividad en parejas</h6>
+
+				<div class="col">
+
+					<div class="row center">
+						<p>
+							Para el siguiente circuito, identifica para qué cambio de la entrada habrá un glitch
+						</p>
+						<img src="images/C02/glitches_actividad.png">
+					</div>
+
+					<div class="row">
+						<countdown time="360" autostart="yes"></countdown>
+					</div>
+
+				</div>
+			</section>
+			<section>
+				<h6>Solución de glitches</h6>
+				<img src="images/C02/solucionglitches.png">
+			</section>
+
+			<section>
+				<h6>Comparación de circuitos</h6>
+				<ul>
+					<li class="fragment">Costo </li>
+					<li class="fragment">Funcionalidad </li>
+					<li class="fragment">Pérformance </li>
+					<li class="fragment">Potencia consumida </li>
+					<li class="fragment">Disponibilidad de recursos </li>
+
+				</ul>
+			</section>
 		</div>
 	</div>
+
+
 
 	<script src="dist/reveal.js"></script>
 	<script src="plugin/notes/notes.js"></script>
