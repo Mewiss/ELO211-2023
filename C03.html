@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+
+			<section>
+				<h2>Circuito secuencial</h2>
+				<p class="fragment">Sus salidas dependen de la entrada actual y las anteriores.</p>
+				<p class="fragment">Por lo tanto, tienen <span class="fragment custom bold"> memoria</span></p>
+
+			</section>
+
+			<section>
+				<h4>¿Cómo implementar una memoria?</h4>
+				<div class="columns">
+					<div>
+						<h3 class="fragment" data-fragment-index="1">Latches</h3>
+						<p class="fragment" data-fragment-index="3">Cambia según sus señales de control</p>
+					</div>
+					<div>
+						<h3 class="fragment" data-fragment-index="2">Flip-flops</h3>
+						<p class="fragment" data-fragment-index="4">Cambia según sus señales de control en los cambios
+							del reloj</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section><!--Latch SR-->
+				<h6>Latches tipo SR</h6>
+
+				<div class="row" class="r-stretch">
+					<div class="col">
+						<img class="fragment" data-fragment-index="1" src="images/C04/C04-LatchSR-01.svg" height="200" width="auto">
+					</div>
+					<div class="col">
+						<img class="fragment" data-fragment-index="2" src="images/C04/C04-LatchSR-02.svg" height="200" width="auto">
+					</div>
+					<div class="col">
+						<img class="fragment" data-fragment-index="3" src="images/C04/C04-LatchSR-03.svg" height="200" width="auto">
+					</div>
+				</div>
+			</section>
+
+
+
+			<section><!--Latch D-->
+				<h3>Latches tipo D</h3>
+
+				<img src="images/C04/C04-LatchD-1.svg">
+
+				<!--
+				<span class="fragment"></span>
+				<span class="fragment"></span>
+				<span class="fragment"></span>
+
+				<div data-animate data-src="images/C04/C04-LatchD-1.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Tabla", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] },
+						{ "element": "#Circuito", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "1"} ] },
+						{ "element": "#Simbolo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "2"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+				<!--
+		</div>
+		-->
+			</section>
+
+			<section><!--FF-->
+				<h3>Flip-Flop D</h3>
+
+				<img src="images/C04/C04-FlipFlopD.svg">
+
+				<!--
+			<span class="fragment"></span>
+			<span class="fragment"></span>
+			<span class="fragment"></span>-->
+
+				<!--
+			<div data-animate data-src="images/C04/C04-FlipFlopD.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Tabla", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] },
+						{ "element": "#Circuito", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "1"} ] },
+						{ "element": "#Simbolo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "2"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+				<!--
+			</div>-->
+			</section>
+
+			<section> <!-- Clock -->
+				<h3>Clock</h3>
+				<p>Periodo (T): duración de un ciclo del clock </p>
+				<p>frecuencia (f): cantidad de ciclos por unidad de tiempo f=1/T </p>
+				<img src="images/C04/C04-Clock-def.svg">
+				<!--
+			<span class="fragment"></span>
+
+			<div data-animate data-src="images/C04/C04-Clock-def.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Periodo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+
+				<!--</div>-->
+			</section>
+
+			<section>
+				<h3>Registros</h3>
+				<p> Cuando queremos guardar información de largo N, usamos un grupo de N flipflops que usan el mismo
+					clock </p>
+			</section>
+
+			<section>
+				<h4>¿Qué entradas debe tener un latch SR para conservar su estado?</h4>
+				<p>a) S=0, R=0</p>
+				<p>b) S=0, R=1</p>
+				<p>c) S=1, R=0</p>
+				<p>d) S=1, R=1</p>
+			</section>
+
+			<section><!--P2-->
+				<h4>¿En qué tiempo NO cambia la salida del latch tipo D?</h4>
+
+				<img src="images/C04/C04-Time-LatchD.svg">
+
+			</section>
+
+			<section><!--P2-->
+				<h4>¿En qué tiempo cambia la salida del Flip-flop tipo D?</h4>
+
+				<img src="images/C04/C04-Time-FFhD.svg">
+
+			</section>
+
+
+			<section>
+				<h4>Comenten dentro de cada grupo de proyecto</h4>
+				<p>¿De qué trata su proyecto?</p>
+				<p>¿Cuáles son los principales bloques y cómo funcionan?</p>
+				<p>¿Qué bloques son combinacionales y cuáles son secuenciales?</p>
+			</section>
+
+
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
+			countdown: { defaultTime: 300, autostart: true },
+
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 10,
+			autoAnimateUnmatched: false
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
