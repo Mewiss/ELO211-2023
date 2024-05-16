@@ -117,13 +117,16 @@
 
 				<div class="row" class="r-stretch">
 					<div class="col">
-						<img class="fragment" data-fragment-index="1" src="images/C04/C04-LatchSR-01.svg" height="200" width="auto">
+						<img class="fragment" data-fragment-index="1" src="images/C04/C04-LatchSR-01.svg" height="200"
+							width="auto">
 					</div>
 					<div class="col">
-						<img class="fragment" data-fragment-index="2" src="images/C04/C04-LatchSR-02.svg" height="200" width="auto">
+						<img class="fragment" data-fragment-index="2" src="images/C04/C04-LatchSR-02.svg" height="200"
+							width="auto">
 					</div>
 					<div class="col">
-						<img class="fragment" data-fragment-index="3" src="images/C04/C04-LatchSR-03.svg" height="200" width="auto">
+						<img class="fragment" data-fragment-index="3" src="images/C04/C04-LatchSR-03.svg" height="200"
+							width="auto">
 					</div>
 				</div>
 			</section>
@@ -277,8 +280,136 @@
 			</section>
 
 
+			<!--Máquinas de estado-->
+			<section>
+				<h2 class="fragment" data-fragment-index="2">FSMs: Finite State Machines</h2>
+				<h3 class="fragment" data-fragment-index="1">Máquinas de estado finito</h3>
+				<p class="fragment" data-fragment-index="3"> Estrategia para definir circuitos secuenciales a partir de
+					sus estados y transiciones.</p>
+			</section>
+
+			<section>
+				<h4>FSM</h4>
+				<ul>
+					<li class="fragment">Tienen entradas, salidas y estados</li>
+					<li class="fragment">Poseen un estado inicial (Ej: IDLE)</li>
+					<li class="fragment">Debemos definir las transiciones entre estados</li>
+					<li class="fragment">En cada ciclo del clock avanza al estado siguiente</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Máquina de Moore</h6>
+				<ul>
+					<li class="fragment">El siguiente estado depende del estado actual y la entrada</li>
+					<li class="fragment">Las salidas dependen sólo del estado</li>
+
+				</ul>
+			</section>
+
+			<section>
+				<h6>Máquina de Moore: Diagrama de estados</h6>
+				<img class="r-stretch" src="images/C03/Clave-Moore.png">
+			</section>
 
 
+			<section>
+				<h6>Máquina de Moore: Tabla de transiciones</h6>
+				<img class="r-stretch" src="images/C03/Clave-Moore-Estados.png">
+			</section>
+
+
+
+
+			<section>
+				<h6>Máquina de Moore: Tabla de salidas</h6>
+				<img class="r-stretch" src="images/C03/Clave-Moore-Salidas.png">
+			</section>
+
+			<section>
+				<h6>Máquina de Mealy</h6>
+				<ul>
+					<li class="fragment">El siguiente estado depende del estado actual y la entrada</li>
+					<li class="fragment">Las salidas dependen del estado actual y la entrada</li>
+					<li class="fragment">Suelen necesitar un estado menos</li>
+
+				</ul>
+			</section>
+
+			<section>
+				<h6>Máquina de Mealy: Diagrama de estados</h6>
+				<img class="r-stretch" src="images/C03/Clave-Mealy.png">
+			</section>
+
+
+			<section>
+				<h6>Máquina de Moore: Tabla de transiciones</h6>
+				<img class="r-stretch" src="images/C03/Clave-Mealy-Transiciones.png">
+			</section>
+
+
+
+			<section>
+				<h4>Ejemplo: Semáforo inteligente</h4>
+				<p>Un semáforo controla el cruce entre las calles A y B. Para esto, cuenta con los sensores Ta y Tb que
+					indican con un 1 cuando pasa un auto. El semáforo permanecerá en verde para una calle hasta que no
+					pase ningún auto por ella. </p>
+				<img class="r-stretch" src="images/C04/C04-Semaforo.svg">
+
+			</section>
+
+
+
+			<section>
+				<section>
+					<h2>Actividad 15</h2>
+					<h6>Diseño de máquinas secuenciales</h6>
+					<h3>Trabajo grupal</h3>
+				</section>
+				
+
+				<section>
+
+					<h4>Caso 1</h4>
+					<p><em>En grupos, realicen un diagrama de estados y las tablas de transiciones y salidas usando el
+						modelo
+						de Moore. </em></p>
+
+					<p>Una radio tiene control de volumen con 4 niveles. Los usuarios pueden subir el volumen apretando
+						un
+						botón con signo + o bajarlo con un botón con signo -. Diseñe una FSM cuya salida sea el nivel de
+						volumen
+						seteado por el usuario.</p>
+					<countdown time="480" autostart="yes" />
+
+				</section>
+
+				<section>
+					<h4>Caso 2</h4>
+					<p><em>En grupos, realicen un diagrama de estados y la tabla de transiciones usando el modelo
+						de Mealy. </em></p>
+					<p>Una máquina expendedora sólo recibe monedas de 500 pesos. Al recibir una nueva moneda, el sensor
+						S toma el valor 1 por un ciclo del reloj. Diseñe una FSM cuya salida indique el dinero
+						acumulado.
+						Cuando el usuario quiera pagar, apretará el botón P y su conteo debe volver a 0.
+					</p>
+					<countdown time="480" autostart="yes" />
+				</section>
+
+				<section>
+					<h4>Caso 3</h4>
+					<p><em>En grupos, realicen un diagrama de estados y la tablas asociadas. Utilice el modelo de FSM que le
+						parezca más adecuado.</em></p>
+					<p>Una puerta del metro es controlada mediante 2 botones: uno para cerrar y uno para abrir. Para
+						poder
+						realizar el movimiento, se cuenta con un motor que recibe dos señales: una indica el sentido de
+						giro
+						(hacia un lado cierra y hacia el otro abre) y la otra indica si gira o no. Realice una FSM capaz
+						de
+						realizar dicho control.</p>
+					<countdown time="480" autostart="yes" />
+				</section>
+			</section>
 		</div>
 	</div>
 
