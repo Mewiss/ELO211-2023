@@ -25,11 +25,11 @@ section.has-dark-background h6 {
   --r-background-color: #fff;
   --r-main-font: 'Kanit', sans-serif;
   --r-main-font-size: 42px;
-  --r-main-color: rgb(182,0,219);
+  --r-main-color: rgb(182, 0, 219);
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: 'Josefin Sans', sans-serif;
-  --r-heading-color: rgb(27,154,229);
+  --r-heading-color: rgb(27, 154, 229);
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -41,8 +41,8 @@ section.has-dark-background h6 {
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color:rgb(56,189,69);
-  --r-link-color-dark: rgb(224,225,10);
+  --r-link-color: rgb(56, 189, 69);
+  --r-link-color-dark: rgb(224, 225, 10);
   --r-link-color-hover: #6ca0e8;
   --r-selection-background-color: #98bdef;
   --r-selection-color: #fff;
@@ -142,8 +142,8 @@ section.has-dark-background h6 {
 .reveal iframe {
   max-width: 95%;
   max-height: 95%;
-  margin:auto;
-  display:block;
+  margin: auto;
+  display: block;
   text-align: center;
 
 }
@@ -311,7 +311,9 @@ section.has-dark-background h6 {
   max-height: 100%;
 }
 
-.katex { font-size: 1.1em; }
+.katex {
+  font-size: 1.1em;
+}
 
 /*********************************************
  * LINKS
@@ -422,6 +424,7 @@ section.has-dark-background h6 {
   align-content: center;
   max-width: 85%;
 }
+
 /*
 .column {
   flex: 50%;
@@ -435,12 +438,11 @@ section.has-dark-background h6 {
 
 /* Create two unequal columns that floats next to each other */
 .column {
-  
+
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
 
 .left {
@@ -452,30 +454,38 @@ section.has-dark-background h6 {
   width: 75%;
   float: right;
 }
-s
 
-.image--changed-with-container {
+s .image--changed-with-container {
   width: auto;
   height: 35%;
 }
 
 
-ol.alphaList {list-style-type: lower-alpha;}
+ol.alphaList {
+  list-style-type: lower-alpha;
+}
 
 .custom-row {
   display: flex;
   flex-direction: row;
-  
-  max-width: 90%;
+
+  max-width: 100%;
 }
+
 .custom-col-8 {
-  flex-direction: col;
-  
-  flex: 0 0 65%;
-  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 60%;
+  max-width: 60%;
+
 }
+
 .custom-col-4 {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   flex-direction: col;
   flex: 0 0 30%;
   max-width: 30%;
