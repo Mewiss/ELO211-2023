@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="72.850281mm"
+   height="44.790775mm"
+   viewBox="0 0 72.850281 44.790775"
+   version="1.1"
+   id="svg1066"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1063" />
+  <g
+     id="layer7"
+     style="display:inline">
+    <g
+       id="g1220"
+       transform="matrix(0.35277777,0,0,-0.35277777,21.1582,7.3767471)">
+      <g
+         id="g146">
+        <g
+           id="g148">
+          <path
+             d="m 20.51196,-85.04045 c 0,11.32858 -9.18338,20.51196 -20.51196,20.51196 -11.32858,0 -20.51196,-9.18338 -20.51196,-20.51196 0,-11.3286 9.18338,-20.51196 20.51196,-20.51196 11.32858,0 20.51196,9.18336 20.51196,20.51196 z"
+             style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path150" />
+        </g>
+        <g
+           id="g152">
+          <path
+             d="m -20.11345,-85.04045 h 40.2269"
+             style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path154" />
+        </g>
+        <g
+           id="g156"
+           transform="translate(-5.832,-81.32)">
+          <g
+             id="g158">
+            <g
+               id="g160"
+               transform="translate(-157.448,-633.077)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,157.448,633.077)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text164"><tspan
+                   x="0"
+                   y="0"
+                   id="tspan162">S</tspan></text>
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,164.131,633.077)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMRoman10;-inkscape-font-specification:LMRoman10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text168"><tspan
+                   x="0"
+                   y="0"
+                   id="tspan166">3</tspan></text>
+              <g
+                 id="g170"
+                 transform="translate(157.448,633.077)" />
+            </g>
+          </g>
+          <g
+             id="g172"
+             transform="translate(5.832,81.32)" />
+        </g>
+        <g
+           id="g174"
+           transform="translate(-9.77,-95.566)">
+          <g
+             id="g176">
+            <g
+               id="g178"
+               transform="translate(-153.51,-618.831)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,153.51,618.831)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text182"><tspan
+                   x="0 7.6443028 12.065705"
+                   y="0"
+                   id="tspan180">R,A</tspan></text>
+              <g
+                 id="g184"
+                 transform="translate(153.51,618.831)" />
+            </g>
+          </g>
+          <g
+             id="g186"
+             transform="translate(9.77,95.566)" />
+        </g>
+      </g>
+    </g>
+    <ellipse
+       style="fill:#ffff00;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-4"
+       cx="95.449921"
+       cy="66.842735"
+       rx="1.2320462"
+       ry="1.2365922"
+       transform="translate(-69.692557,-27.21519)" />
+    <ellipse
+       style="fill:#ff0000;fill-opacity:1;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-3-4"
+       cx="86.094093"
+       cy="66.842735"
+       rx="1.2320462"
+       ry="1.2365922"
+       transform="translate(-69.692557,-27.21519)" />
+  </g>
+</svg>

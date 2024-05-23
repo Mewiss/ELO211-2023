@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="72.850281mm"
+   height="44.790775mm"
+   viewBox="0 0 72.850281 44.790775"
+   version="1.1"
+   id="svg1066"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1063" />
+  <g
+     id="layer5"
+     style="display:inline">
+    <g
+       id="g104"
+       transform="matrix(0.35277777,0,0,-0.35277777,21.1582,7.3767471)">
+      <g
+         id="g106">
+        <path
+           d="m 105.65701,-85.04045 c 0,11.38634 -9.23022,20.61656 -20.61656,20.61656 -11.38634,0 -20.61656,-9.23022 -20.61656,-20.61656 0,-11.38634 9.23022,-20.61656 20.61656,-20.61656 11.38634,0 20.61656,9.23022 20.61656,20.61656 z"
+           style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path108" />
+      </g>
+      <g
+         id="g110">
+        <path
+           d="m 64.8224,-85.04045 h 40.4361"
+           style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path112" />
+      </g>
+      <ellipse
+         style="fill:#00ff00;stroke:#8c75a1;stroke-width:0.585208;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+         id="path497-6"
+         cx="97.984039"
+         cy="91.804787"
+         transform="scale(1,-1)"
+         rx="3.4924147"
+         ry="3.5053008" />
+      <ellipse
+         style="fill:#ff0000;fill-opacity:1;stroke:#8c75a1;stroke-width:0.585208;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+         id="path497-3-6"
+         cx="71.46357"
+         cy="91.804787"
+         transform="scale(1,-1)"
+         rx="3.4924147"
+         ry="3.5053008" />
+      <g
+         id="g114"
+         transform="translate(79.207,-81.32)">
+        <g
+           id="g116">
+          <g
+             id="g118"
+             transform="translate(-242.487,-633.077)">
+            <text
+               xml:space="preserve"
+               transform="matrix(1,0,0,-1,242.487,633.077)"
+               style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text122"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan120">S</tspan></text>
+            <text
+               xml:space="preserve"
+               transform="matrix(1,0,0,-1,249.171,633.077)"
+               style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMRoman10;-inkscape-font-specification:LMRoman10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text126"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan124">2</tspan></text>
+            <g
+               id="g128"
+               transform="translate(242.487,633.077)" />
+          </g>
+        </g>
+        <g
+           id="g130"
+           transform="translate(-79.207,81.32)" />
+      </g>
+      <g
+         id="g132"
+         transform="translate(74.992,-95.566)">
+        <g
+           id="g134">
+          <g
+             id="g136"
+             transform="translate(-238.272,-618.831)">
+            <text
+               xml:space="preserve"
+               transform="matrix(1,0,0,-1,238.272,618.831)"
+               style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text140"><tspan
+                 x="0 7.6443028 12.065705"
+                 y="0"
+                 id="tspan138">R,V</tspan></text>
+            <g
+               id="g142"
+               transform="translate(238.272,618.831)" />
+          </g>
+        </g>
+        <g
+           id="g144"
+           transform="translate(-74.992,95.566)" />
+      </g>
+    </g>
+  </g>
+</svg>

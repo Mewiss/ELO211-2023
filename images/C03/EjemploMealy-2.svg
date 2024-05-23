@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="83.317619mm"
+   height="21.085545mm"
+   viewBox="0 0 83.317619 21.085545"
+   version="1.1"
+   id="svg2265"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2262" />
+  <g
+     id="layer9"
+     style="display:inline">
+    <g
+       id="g438"
+       transform="matrix(0.35277777,0,0,-0.35277777,26.75255,7.2445795)">
+      <path
+         d="m -16.38553,-4.38997 c -25.86513,-6.9306 -26.44409,14.85645 -1.73691,9.21149"
+         style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path440" />
+      <g
+         id="g442"
+         transform="matrix(0.97093,-0.23923,0.23923,0.97093,-17.73657,4.73329)">
+        <g
+           id="g444">
+          <path
+             d="M -2.55046,3.11095 C -2.0845,1.24435 -1.04614,0.36295 0,0 -1.04614,-0.36295 -2.0845,-1.24435 -2.55046,-3.11095"
+             style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path446" />
+        </g>
+      </g>
+      <g
+         id="g448">
+        <g
+           id="g450"
+           transform="translate(-75.834,-2.491)">
+          <g
+             id="g452">
+            <g
+               id="g454"
+               transform="translate(-103.304,-529.73)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,103.304,529.73)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text458"><tspan
+                   x="0 7.2069449 12.473175 17.454475 23.813602 28.244967"
+                   y="0"
+                   id="tspan456">Ta/V,R</tspan></text>
+              <g
+                 id="g460"
+                 transform="translate(103.304,529.73)" />
+            </g>
+          </g>
+          <g
+             id="g462"
+             transform="translate(75.834,2.491)" />
+        </g>
+      </g>
+    </g>
+    <ellipse
+       style="fill:#00ff00;fill-opacity:1;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-3"
+       cx="7.1476188"
+       cy="9.9489803"
+       rx="1.2320462"
+       ry="1.2365922" />
+    <ellipse
+       style="fill:#ff0000;fill-opacity:1;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-3-4"
+       cx="11.379591"
+       cy="9.9489803"
+       rx="1.2320462"
+       ry="1.2365922" />
+  </g>
+</svg>

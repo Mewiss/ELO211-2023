@@ -461,3 +461,22 @@ s
 
 
 ol.alphaList {list-style-type: lower-alpha;}
+
+.custom-row {
+  display: flex;
+  flex-direction: row;
+  
+  max-width: 90%;
+}
+.custom-col-8 {
+  flex-direction: col;
+  
+  flex: 0 0 65%;
+  max-width: 65%;
+}
+.custom-col-4 {
+  
+  flex-direction: col;
+  flex: 0 0 30%;
+  max-width: 30%;
+}

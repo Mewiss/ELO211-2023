@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<link rel="stylesheet" href="css/animRestricciones.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins/menu/font-awesome/css/fontawesome.css">
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include>
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Circuitos secuenciales</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+			<section>
+				<section>
+					<h6>Recordemos: Semáforo inteligente</h6>
+					<div class="row">
+						<div class="col">
+							<p class="r-fit-text">Un semáforo controla el cruce entre las calles A y B. Para esto,
+								cuenta con los sensores Ta y
+								Tb que indican con un 1 cuando pasa un auto. El semáforo permanecerá en verde para una
+								calle
+								hasta
+								que no pase ningún auto por ella. </p>
+						</div>
+						<div class="col"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
+					</div>
+
+				</section>
+
+
+				<section>
+					<h6>Recordemos: Semáforo inteligente (Moore)</h6>
+					<div class=".custom-row">
+						<div class=".custom-col-4">
+							<div class="r-stack">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-1.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-2.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-3.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-4.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-5.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-6.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-7.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMoore-8.svg">
+							</div>
+						</div>
+						<div class=".custom-col-8"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
+					</div>
+				</section>
+
+				<section>
+					<h6>Recordemos: Semáforo inteligente (Mealy)</h6>
+					<div class="row">
+						<div class="col">
+							<div class="r-stack">
+								<img class="r-stretch fragment" src="images/C03/EjemploMealy-1.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMealy-2.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMealy-3.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMealy-4.svg">
+								<img class="r-stretch fragment" src="images/C03/EjemploMealy-5.svg">
+
+							</div>
+						</div>
+						<div class="col"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
+					</div>
+				</section>
+
+			</section>
+
+			</section>
+
+			<section data-auto-animate>
+				<h6 class="r-fit-text">Circuito secuencial con Máquina de Moore</h6>
+				<img class="r-stretch" data-id="box" src="images/C04/C04-GeneralMoore.svg">
+			</section>
+
+			<section data-auto-animate>
+				<h6 class="r-fit-text">Circuito secuencial con Máquina de Mealy</h6>
+				<img class="r-stretch" data-id="box" src="images/C04/C04-GeneralMealy.svg">
+			</section>
+
+			<section>
+				<h3>Ejemplo: opciones de codificación de estados</h4>
+
+					<table class="tg r-stretch">
+						<thead>
+							<tr>
+								<th class="tg-0lax">State</th>
+								<th class="tg-0lax fragment" data-fragment-index="1">C. binario</th>
+								<th class="tg-0lax fragment" data-fragment-index="2">C. Gray</th>
+								<th class="tg-0lax fragment" data-fragment-index="3">C. One-Hot</th>
+								<th class="tg-0lax fragment" data-fragment-index="4">C. One-Cold</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tg-0lax">S0</td>
+								<td class="tg-0lax fragment" data-fragment-index="1">00</td>
+								<td class="tg-0lax fragment" data-fragment-index="2">00</td>
+								<td class="tg-0lax fragment" data-fragment-index="3">0001<br></td>
+								<td class="tg-0lax fragment" data-fragment-index="4">1110</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S1</td>
+								<td class="tg-0lax fragment" data-fragment-index="1">01</td>
+								<td class="tg-0lax fragment" data-fragment-index="2">01</td>
+								<td class="tg-0lax fragment" data-fragment-index="3">0010<br></td>
+								<td class="tg-0lax fragment" data-fragment-index="4">1101</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S2</td>
+								<td class="tg-0lax fragment" data-fragment-index="1">10<br></td>
+								<td class="tg-0lax fragment" data-fragment-index="2">11</td>
+								<td class="tg-0lax fragment" data-fragment-index="3">0100<br></td>
+								<td class="tg-0lax fragment" data-fragment-index="4">1011</td>
+							</tr>
+							<tr>
+								<td class="tg-0lax">S3</td>
+								<td class="tg-0lax fragment" data-fragment-index="1">11</td>
+								<td class="tg-0lax fragment" data-fragment-index="2">10</td>
+								<td class="tg-0lax fragment" data-fragment-index="3">1000</td>
+								<td class="tg-0lax fragment" data-fragment-index="4">0111</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="fragment">Se debe elegir una estrategia de codificación. Utilizaremos un Flip-Flop por
+						cada bit de estado.</p>
+			</section>
+
+			<section>
+				<h4>Tablas de estados, transiciones y salidas máquina de Moore</h4>
+				<div class="row">
+					<div class="col">
+
+						<table class="tg fragment">
+							<thead>
+								<tr>
+									<th class="tg-small">S(t)</th>
+									<th class="tg-small">Cod.</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">00</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">01</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">10</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">11</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col">
+
+						<table class="tg fragment">
+							<thead>
+								<tr>
+									<th class="tg-small">State</th>
+									<th class="tg-small">LA</th>
+									<th class="tg-small">LB</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">001</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">010</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">001</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="col">
+
+						<table class="tg fragment">
+							<thead>
+								<tr>
+									<th class="tg-small">S(t)</th>
+									<th class="tg-small">In(TATB)</th>
+									<th class="tg-small">S(t+1)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">1X</td>
+									<td class="tg-small">S0</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">0X</td>
+									<td class="tg-small">S1</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">XX</td>
+									<td class="tg-small">S2</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">X1</td>
+									<td class="tg-small">S2</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">X0</td>
+									<td class="tg-small">S3</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">XX</td>
+									<td class="tg-small">S0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h4>Tabla de estados y transiciones máquina de Moore</h4>
+				<div class="row">
+					<div class="col">
+						<img src="images/C04/C04-EjemploMoore.svg">
+					</div>
+
+					<div class="col">
+						<table class="tg ">
+							<thead>
+								<tr>
+									<th class="tg-0lax">St</th>
+									<th class="tg-0lax">In(Ta,Tb)<br></th>
+									<th class="tg-0lax">St+1</th>
+									<th class="tg-0lax ">Out(La,Lb)<br></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
+									<td class="tg-0lax">0X<br></td>
+									<td class="tg-0lax">01<br></td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
+									<td class="tg-0lax">1X</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">01</td>
+									<td class="tg-0lax">XX</td>
+									<td class="tg-0lax">10<br></td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">010100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">10</td>
+									<td class="tg-0lax">X0</td>
+									<td class="tg-0lax">11<br></td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">100001<br></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">10<br></td>
+									<td class="tg-0lax">X1</td>
+									<td class="tg-0lax">10<br></td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">100001</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">11</td>
+									<td class="tg-0lax">XX</td>
+									<td class="tg-0lax">00</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">100010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+				<h6 class="r-fit-text"> Obtener expresiones a partir de la tablas de salidas de una máquina de Moore
+				</h6>
+				<div class="row">
+
+					<div class="col">
+
+						<table class="tg fragment">
+							<thead>
+								<tr>
+									<th class="tg-small">State</th>
+									<th class="tg-small">Código</th>
+									<th class="tg-small">LA</th>
+									<th class="tg-small">LB</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-small">S0</td>
+									<td class="tg-small">00</td>
+									<td class="tg-small">001</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S1</td>
+									<td class="tg-small">01</td>
+									<td class="tg-small">010</td>
+									<td class="tg-small">100</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S2</td>
+									<td class="tg-small">10</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">001</td>
+								</tr>
+								<tr>
+									<td class="tg-small">S3</td>
+									<td class="tg-small">11</td>
+									<td class="tg-small">100</td>
+									<td class="tg-small">010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="col">
+
+
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h4>Tabla de estados y transiciones máquina de Moore</h4>
+				<div class="row">
+					<div class="col">
+						
+					</div>
+
+					<div class="col">
+						<table class="tg ">
+							<thead>
+								<tr>
+									<th class="tg-0lax ">St</th>
+									<th class="tg-0lax ">In(Ta,Tb)<br></th>
+									<th class="tg-0lax ">St+1</th>
+									<th class="tg-0lax">Out(La,Lb)<br></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">0X<br></td>
+									<td class="tg-0lax  fragment custom bold" data-fragment-index="1">01<br></td>
+									<td class="tg-0lax">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">1X</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">00</td>
+									<td class="tg-0lax">001100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">01</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">XX</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">10<br></td>
+									<td class="tg-0lax">010100</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">10</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">X0</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">11<br></td>
+									<td class="tg-0lax">100001<br></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">10<br></td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">X1</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">10<br></td>
+									<td class="tg-0lax">100001</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">11</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="2">XX</td>
+									<td class="tg-0lax fragment custom bold" data-fragment-index="1">00</td>
+									<td class="tg-0lax">100010</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+				<h5>Tabla de estados y transiciones máquina de Mealy</h5>
+
+				<img class="r-stretch" src="images/C04/C04-EjemploMealy.svg">
+
+
+
+				<table class="tg">
+					<thead>
+						<tr>
+							<th class="tg-0lax">St</th>
+							<th class="tg-0lax">In(Ta,Tb)<br></th>
+							<th class="tg-0lax">St+1</th>
+							<th class="tg-0lax">Out(La,Lb)<br></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">0X<br></td>
+							<td class="tg-0lax">1<br></td>
+							<td class="tg-0lax">010100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">1X</td>
+							<td class="tg-0lax">0</td>
+							<td class="tg-0lax">001100</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">X0<br></td>
+							<td class="tg-0lax">0<br></td>
+							<td class="tg-0lax">100001</td>
+						</tr>
+						<tr>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">X1</td>
+							<td class="tg-0lax">1</td>
+							<td class="tg-0lax">100010</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</section>
+
+			<section>
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="2">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="0">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">0X<br></td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1<br></td>
+										<td class="tg-0lax">010100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">1X</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0</td>
+										<td class="tg-0lax">001100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X0<br></td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0<br></td>
+										<td class="tg-0lax">100001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1</td>
+										<td class="tg-0lax">100010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
+										<td class="tg-0lax">1<br></td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">0</span>10100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
+										<td class="tg-0lax">0</td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">0</span>01100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
+										<td class="tg-0lax">0<br></td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">1</span>00001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
+										<td class="tg-0lax">1</td>
+										<td class="tg-0lax"><span class="fragment custom bold"
+												data-fragment-index="0">1</span>00010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+
+
+
+
+				</section>
+				<section>
+					<h5>Ej: Síntesis de Máquina de Mealy</h5>
+
+					<div class="row">
+						<div class="col">
+							<table class="tg">
+								<thead>
+									<tr>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
+										<th class="tg-0lax fragment custom bold" data-fragment-index="1">In(Ta,Tb)<br>
+										</th>
+										<th class="tg-0lax">St+1</th>
+										<th class="tg-0lax">Out(La,Lb)<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
+										<td class="tg-0lax">1<br></td>
+										<td class="tg-0lax">0<span class="fragment custom bold"
+												data-fragment-index="0">1</span>0100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
+										<td class="tg-0lax">0</td>
+										<td class="tg-0lax">0<span class="fragment custom bold"
+												data-fragment-index="0">0</span>1100</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
+										<td class="tg-0lax">0<br></td>
+										<td class="tg-0lax">1<span class="fragment custom bold"
+												data-fragment-index="0">0</span>0001</td>
+									</tr>
+									<tr>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
+										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
+										<td class="tg-0lax">1</td>
+										<td class="tg-0lax">1<span class="fragment custom bold"
+												data-fragment-index="0">0</span>0010</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+
+
+
+
+				</section>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+
+
+	<!-- Font awesome is required for the chalkboard plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Custom controls plugin is used to for opening and closing annotation modes. -->
+	<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/plugin.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/style.css">
+	<!-- Chalkboard plugin -->
+	<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css">
+
+
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+			customcontrols: {
+				controls: [
+					{
+						icon: '<i class="fa fa-pen-square"></i>',
+						title: 'Toggle chalkboard (B)',
+						action: 'RevealChalkboard.toggleChalkboard();'
+					},
+					{
+						icon: '<i class="fa fa-pen"></i>',
+						title: 'Toggle notes canvas (C)',
+						action: 'RevealChalkboard.toggleNotesCanvas();'
+					}
+				]
+			},
+			chalkboard: {
+				// add configuration here
+			},
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate, RevealChalkboard, RevealCustomControls],
+			countdown: { defaultTime: 300, autostart: true },
+
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 10,
+			autoAnimateUnmatched: false
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>

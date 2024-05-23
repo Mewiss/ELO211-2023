@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="83.317619mm"
+   height="21.085545mm"
+   viewBox="0 0 83.317619 21.085545"
+   version="1.1"
+   id="svg2265"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2262" />
+  <g
+     id="layer10"
+     style="display:inline">
+    <g
+       id="g374"
+       transform="matrix(0.35277777,0,0,-0.35277777,26.75255,7.2445795)">
+      <path
+         d="m 101.6055,0 c 0,9.14873 -7.41632,16.56505 -16.56505,16.56505 C 75.89172,16.56505 68.4754,9.14873 68.4754,0 c 0,-9.14873 7.41632,-16.56505 16.56505,-16.56505 9.14873,0 16.56505,7.41632 16.56505,16.56505 z"
+         style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path376" />
+    </g>
+    <g
+       id="g382"
+       transform="matrix(0.35277777,0,0,-0.35277777,54.695019,8.0492658)">
+      <g
+         id="g384">
+        <g
+           id="g386"
+           transform="translate(-258.345,-535.94)">
+          <text
+             xml:space="preserve"
+             transform="matrix(1,0,0,-1,258.345,535.94)"
+             style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text390"><tspan
+               x="0"
+               y="0"
+               id="tspan388">S</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="matrix(1,0,0,-1,265.029,535.94)"
+             style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMRoman10;-inkscape-font-specification:LMRoman10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text394"><tspan
+               x="0"
+               y="0"
+               id="tspan392">1</tspan></text>
+          <g
+             id="g396"
+             transform="translate(258.345,535.94)" />
+        </g>
+      </g>
+      <g
+         id="g398"
+         transform="translate(-79.207,-3.719)" />
+    </g>
+    <g
+       id="g408"
+       transform="matrix(0.35277777,0,0,-0.35277777,26.75255,7.2445795)">
+      <path
+         d="M 14.69064,-8.48149 C 32.73206,-18.89766 50.09793,-19.31662 68.08499,-9.73833"
+         style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path410" />
+      <g
+         id="g412"
+         transform="matrix(0.8794,0.47598,-0.47598,0.8794,68.07195,-9.7144)">
+        <g
+           id="g414">
+          <path
+             d="M 2.59026,0 -1.55415,2.0722 0,0 -1.55415,-2.0722"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path416" />
+        </g>
+      </g>
+      <g
+         id="g418">
+        <g
+           id="g420"
+           transform="translate(24.299,-29.132)">
+          <g
+             id="g422">
+            <g
+               id="g424"
+               transform="translate(-203.437,-503.089)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,207.183,505.607)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMRoman10;-inkscape-font-specification:LMRoman10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text428"><tspan
+                   x="0"
+                   y="0"
+                   id="tspan426">¯</tspan></text>
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,203.437,503.089)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text432"><tspan
+                   x="0 7.2069449 12.473175 16.89657 24.368519 28.799885"
+                   y="0"
+                   id="tspan430">Ta/A,R</tspan></text>
+              <g
+                 id="g434"
+                 transform="translate(203.437,503.089)" />
+            </g>
+          </g>
+          <g
+             id="g436"
+             transform="translate(-24.299,29.132)" />
+        </g>
+      </g>
+    </g>
+    <ellipse
+       style="fill:#ffff00;fill-opacity:1;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-3-8"
+       cx="42.600277"
+       cy="19.745728"
+       rx="1.2320462"
+       ry="1.2365922" />
+    <ellipse
+       style="fill:#ff0000;fill-opacity:1;stroke:#8c75a1;stroke-width:0.206448;stroke-linejoin:bevel;stroke-miterlimit:4.4"
+       id="path497-3-4-2"
+       cx="46.832253"
+       cy="19.745728"
+       rx="1.2320462"
+       ry="1.2365922" />
+  </g>
+</svg>

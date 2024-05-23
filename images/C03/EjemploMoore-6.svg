@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="72.850281mm"
+   height="44.790775mm"
+   viewBox="0 0 72.850281 44.790775"
+   version="1.1"
+   id="svg1066"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1063" />
+  <g
+     id="layer6"
+     style="display:inline">
+    <g
+       id="g256"
+       transform="matrix(0.35277777,0,0,-0.35277777,21.1582,7.3767471)">
+      <path
+         d="m 105.33946,-79.60199 c 32.18694,8.62457 32.76596,-18.64815 1.73708,-11.31517"
+         style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path258" />
+      <g
+         id="g260"
+         transform="matrix(-0.96999,0.24309,-0.24309,-0.96999,106.69008,-90.82576)">
+        <g
+           id="g262">
+          <path
+             d="M -2.55046,3.11095 C -2.0845,1.24435 -1.04614,0.36295 0,0 -1.04614,-0.36295 -2.0845,-1.24435 -2.55046,-3.11095"
+             style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path264" />
+        </g>
+      </g>
+      <g
+         id="g266">
+        <g
+           id="g268"
+           transform="translate(133.64,-88.499)">
+          <g
+             id="g270">
+            <g
+               id="g272"
+               transform="translate(-296.92,-625.898)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,296.92,625.898)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text276"><tspan
+                   x="0 7.2069449"
+                   y="0"
+                   id="tspan274">Tb</tspan></text>
+              <g
+                 id="g278"
+                 transform="translate(296.92,625.898)" />
+            </g>
+          </g>
+          <g
+             id="g280"
+             transform="translate(-133.64,88.499)" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g282"
+       transform="matrix(0.35277777,0,0,-0.35277777,21.1582,7.3767471)">
+      <path
+         d="M 64.02539,-85.04045 H 23.50073"
+         style="fill:none;stroke:#000000;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path284" />
+      <g
+         id="g286"
+         transform="rotate(180,11.750365,-42.520225)">
+        <g
+           id="g288">
+          <path
+             d="M 2.59026,0 -1.55415,2.0722 0,0 -1.55415,-2.0722"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path290" />
+        </g>
+      </g>
+      <g
+         id="g292">
+        <g
+           id="g294"
+           transform="translate(36.727,-81.32)">
+          <g
+             id="g296">
+            <g
+               id="g298"
+               transform="translate(-200.007,-633.077)">
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,203.257,635.706)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMRoman10;-inkscape-font-specification:LMRoman10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text302"><tspan
+                   x="0"
+                   y="0"
+                   id="tspan300">¯</tspan></text>
+              <text
+                 xml:space="preserve"
+                 transform="matrix(1,0,0,-1,200.007,633.077)"
+                 style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:LMMathItalic10;-inkscape-font-specification:LMMathItalic10-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="text306"><tspan
+                   x="0 7.2069449"
+                   y="0"
+                   id="tspan304">Tb</tspan></text>
+              <g
+                 id="g308"
+                 transform="translate(200.007,633.077)" />
+            </g>
+          </g>
+          <g
+             id="g310"
+             transform="translate(-36.727,81.32)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
