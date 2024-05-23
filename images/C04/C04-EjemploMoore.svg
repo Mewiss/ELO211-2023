@@ -25,14 +25,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="3.3638608"
-     inkscape:cx="123.07287"
-     inkscape:cy="88.588683"
+     inkscape:cx="114.15455"
+     inkscape:cy="88.588684"
      inkscape:window-width="1920"
      inkscape:window-height="1094"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer6" />
+     inkscape:current-layer="g226" />
   <defs
      id="defs1063" />
   <g
@@ -144,7 +144,6 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Tran1"
-     sodipodi:insensitive="true"
      style="display:inline">
     <g
        id="g190"
@@ -165,7 +164,8 @@
         </g>
       </g>
       <g
-         id="g200">
+         id="g200"
+         transform="translate(-94.556,-7.2651738)">
         <g
            id="g202"
            transform="translate(36.08,3.719)">
@@ -213,10 +213,11 @@
         </g>
       </g>
       <g
-         id="g226">
+         id="g226"
+         transform="translate(89.891342,16.944816)">
         <g
            id="g228"
-           transform="translate(-59.976,-4.396)">
+           transform="translate(-58.944291,-14.721815)">
           <g
              id="g230">
             <g
