@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/elo211.css">
+	<!--<link rel="stylesheet" href="css/animRestricciones.css">-->
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.fragment.bold {
+			font-weight: normal;
+		}
+
+		.fragment.bold.visible {
+			font-weight: bold;
+		}
+
+		.reveal td {
+			font-size: 60%;
+		}
+
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 28px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+
+		.tg .tg-0lax {
+			text-align: center;
+			vertical-align: center;
+			font-size: 3vw;
+			border-width: 2px
+		}
+
+		.tg .tg-small {
+			text-align: center;
+			vertical-align: center;
+			font-size: 2vw
+		}
+
+		.smalltab {
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<section class="Title" data-include> <!--Titulo-->
+				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
+				<h2> Capítulo 4: Bloques y Métricas</h2>
+				<p>Marie González-Inostroza</p>
+			</section>
+
+			<section>
+				<section>
+					<h1>Memorias</h1>
+				</section>
+
+				<section>
+					<h3>Memorias</h3>
+					<img src="images/C05/MemoriaGenerica.jpg">
+				</section>
+
+
+				<section>
+					<h3>Memorias</h3>
+					<div class="row">
+						<div class="col fragment">
+							<img src="images/C05/MemoriaGenerica.jpg">
+						</div>
+
+						<div class="col fragment">
+							<img src="images/C05/MemoriaTamaños.jpg">
+						</div>
+						<div class="col fragment">
+							<img src="images/C05/MemoriaTamaños2.jpg">
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Acceso a un dato</h3>
+					<img src="images/C05/Bitline.jpg" class="fragment">
+				</section>
+
+				<section>
+					<h3>Organización de memorias</h3>
+					<img class="fragment" src="images/C05/MemOrg.jpg">
+				</section>
+
+				<section>
+					<h3>Tipos de Memorias</h3>
+					<div class="row">
+
+						<div class="col fragment">
+							<h4>RAM: Random Access Memory</h4>
+							<p>Se puede cambiar la información. Se borran los datos al apagar el sistema.</p>
+						</div>
+						<div class="col fragment">
+							<h4>ROM: Read Only Memory</h4>
+							<p>No se puede cambiar la infomación.Se mantienen los datos al apagar el sistema</p>
+						</div>
+
+
+					</div>
+				</section>
+
+
+
+				<section>
+					<h3>Tipos de RAM</h3>
+					<div class="row">
+						<div class="col fragment">
+							<h4>SRAM: Static RAM</h4>
+							<p>Guarda el valor hasta que haya un cambio.</p>
+						</div>
+
+						<div class="col fragment">
+							<h4>DRAM: Dynamic RAM</h4>
+							<p>Se debe refrescar cada vez que se lee.</p>
+						</div>
+					</div>
+				</section>
+
+
+
+
+				<section>
+					<h3>Tipos de RAM</h3>
+					<div class="row">
+						<div class="col fragment">
+							<h4>SRAM: Static RAM</h4>
+							<img src="images/C05/SRAM.jpg">
+						</div>
+
+						<div class="col fragment">
+							<h4>DRAM: Dynamic RAM</h4>
+							<img src="images/C05/DRAM.jpg">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Comparación</h3>
+					<img src="images/C05/Tiempos.jpg">
+				</section>
+
+
+
+
+
+				<section>
+					<h3>Ejemplo de Implementación ROM</h3>
+					<img src="images/C05/ROM.jpg">
+				</section>
+
+
+				<section>
+					<h4>EEPROMS: Electrically Erasable Programmable ROMs</h4>
+
+					<p class="fragment">
+						Son ROMs hechas para ser reescritas. No se borran al reiniciar el sistema.
+					</p>
+				</section>
+
+				<section>
+					<h4>LUTs: Look Up Tables</h4>
+
+					<p class="fragment">
+						Memorias que implementan alguna lógica.
+					</p>
+
+					<img src="images/C05/LUT.jpg">
+				</section>
+
+			</section>
+
+			<section>
+				<section >
+					<h2> Métricas de pérformance</h2>
+					
+				</section>
+
+				<section>
+					<h3>Métricas de pérformance</h3>
+					<div class="row">
+						<div class="col fragment">
+							<h4>Latencia</h4>
+							<p>Tiempo que tarda un sistema en entregar un resultado luego de recibir una entrada</p>
+						</div>
+
+						<div class="col fragment">
+							<h4>Rendimiento</h4>
+							<p>Cantidad de resultados por unidad de tiempo</p>
+						</div>
+					</div>
+
+
+
+				</section>
+
+				<section>
+					<h3>Ejemplo</h3>
+					<div class="row">
+						<div class="col fragment">
+							<img src="images/C04/C04-Paralelismo1.png">
+						</div>
+						<div class="col fragment">
+							<img src="images/C04/C04-Paralelismo2g30466.png">
+						</div>
+						<div class="col fragment">
+							<img src="images/C04/C04-Paralelismo3.png">
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<h3>Ejemplo</h3>
+					<img src="images/C04/C04-Paralelismo.png">
+				</section>
+
+				<section>
+					<h2>Ejercicio en parejas</h2>
+					<p>Tenemos un sistema formado por dos circuitos combinacionales CC1 y CC2 entre dos registros. Los
+						tiempos de propagación de los circuitos combinacionales son 5ns y 4ns, respectivamente. Los
+						flipflops tienen tsetup = 0,2ns y tpcq = 0,3ns.</p>
+					<ul>
+						<li>Determinen el mejor clock a usar</li>
+						<li>Determinen la latencia del sistema</li>
+						<li>Determinen el rendimiento del sistema</li>
+					</ul>
+					<countdown time="480" autostart="yes" />
+				</section>
+
+
+				<section>
+					<h3>Paralelismo Espacial</h3>
+					<p>Replicar el hardware múltiples veces para obtener más resultados en el mismo tiempo</p>
+				</section>
+
+				<section>
+					<h3>Ejemplo Paralelismo espacial</h3>
+					<div class="row">
+						<div class="col fragment">
+							<img src="images/C04/C04-ParalelismoEspacial-1.png">
+						</div>
+						<div class="col fragment">
+							<img src="images/C04/C04-ParalelismoEspacial2.png">
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h2>Ejercicio en parejas</h2>
+					<p>Para aumentar el rendimiento del circuito anterior, se utiliza una estrategia de paralelismo
+						espacial
+						duplicando el circuito 3 veces.</p>
+					<ul>
+						<li>Determinen la nueva latencia del sistema</li>
+						<li>Determinen el nuevo rendimiento del sistema</li>
+					</ul>
+					<countdown time="300" autostart="yes" />
+				</section>
+
+				<section>
+					<h3>Paralelismo Temporal (pipeline)</h3>
+					<p>División de una tarea en tareas más pequeñas que se ejecutan simultáneamente.</p>
+				</section>
+
+				<section>
+					<h3>Ejemplo Paralelismo temporal (Pipeline)</h3>
+
+
+					<div class="r-stack">
+						<img class="fragment" src="images/C04/C04-ParalelismoTemporal-1.png">
+						<img class="fragment" src="images/C04/C04-ParalelismoTemporal-2.png">
+						<img class="fragment" src="images/C04/C04-ParalelismoTemporal-3.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Ejercicio en parejas</h2>
+					<p>Para mejorar el rendimiento del circuito anterior, se utiliza una estrategia de paralelismo
+						temporal
+						ubicando un flipflop entre ambas partes combinacionales.</p>
+					<ul>
+						<li>Determinen el nuevo mejor clock a usar</li>
+						<li>Determinen la nueva latencia del sistema</li>
+						<li>Determinen el nuevo rendimiento del sistema</li>
+					</ul>
+					<countdown time="300" autostart="yes" />
+				</section>
+			</section>
+
+
+
+
+			<section>
+
+				<section>
+					<h2>Introducción a la microarquitectura</h2>
+				</section>
+				<section>
+					<h3>Niveles de abstracción</h3>
+
+					<img class="r-stretch" src="images/C05/Abstraccion.png">
+
+				</section>
+
+
+
+
+
+
+				<section>
+					<div class="row">
+						<div class="col fragment">
+							<h4>Arquitectura</h4>
+							<p>Visión de cómo funciona un computador</p>
+						</div>
+						<div class="col fragment">
+							<h4>Microarquitectura</h4>
+							<p>Cómo implementar una arquitectura en hardware</p>
+						</div>
+					</div>
+				</section>
+
+
+
+				<section>
+					<h3>CPU: Central Processing Unit</h3>
+					<p>Interpreta instrucciones de un código mediante operaciones lógicas y aritméticas. </p>
+				</section>
+
+
+				<section>
+					<h3>MIPS: Microprocessor without Interlocked Pipeline Stages</h3>
+					<ul>
+						<li class="fragment">ALU</li>
+						<li class="fragment">Registros de estado
+							<ul>
+								<li class="fragment">PC: Program Counter</li>
+								<li class="fragment">Register file</li>
+								<li class="fragment">Instruction Memory</li>
+								<li class="fragment">Data Memory</li>
+							</ul>
+						</li>
+
+						<li class="fragment">Unidad de Control (CU)</li>
+
+					</ul>
+				</section>
+
+				<section>
+					<h3>ALU</h3>
+					<img class="r-stretch" src="images/C05/ALU.png">
+
+				</section>
+
+				<section>
+					<h3>ALU</h3>
+					<img class="r-stretch" src="images/C05/ALU2.png">
+				</section>
+
+				<section>
+					<h3>Estados en MIPS</h3>
+
+					<img class="r-stretch" src="images/C05/partesMIPS.png">
+
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 1: Fetch instruction</p>
+					<img class="r-stretch" src="images/C05/SC1.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 2: Read source operands from RF</p>
+					<img class="r-stretch" src="images/C05/SC2.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 3: Sign-extend the immediate
+					</p>
+					<img class="r-stretch" src="images/C05/SC3.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 4: Compute the memory address
+					</p>
+					<img class="r-stretch" src="images/C05/SC4.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 5: Read data from memory and write it back to register file
+					</p>
+					<img class="r-stretch" src="images/C05/SC5.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 6: Determine address of next instruction </p>
+					<img class="r-stretch" src="images/C05/SC6.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 7: Determine address of next instruction </p>
+					<img class="r-stretch" src="images/C05/SC7.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 8: Write data in rt to memory </p>
+					<img class="r-stretch" src="images/C05/SC8.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle</h4>
+					<p data-id="titulo">STEP 9:Write ALUResult to register file </p>
+					<img class="r-stretch" src="images/C05/SC9.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Single-Cycle processor</h4>
+					<img class="r-stretch" src="images/C05/SC10.png">
+				</section>
+
+
+				<section>
+					<h4>En parejas, discutan:</h4>
+					<ul>
+						<li>¿Cuáles son las partes básicas de una CPU?</li>
+						<li>¿Cómo se realizan operaciones aritméticas en una CPU?</li>
+						<li>¿Cómo se guarda información en una CPU?</li>
+						<li>¿Qué tipo de memorias crees que puede utilizar una CPU?</li>
+					</ul>
+					<countdown time="300" autostart="yes" />
+				</section>
+
+
+
+
+
+
+
+
+				<section>
+					<h3>Pérformance de un procesador</h3>
+					<p>
+						Execution Time = (#instructions)(cycles/instruction)(seconds/cycle)
+
+					</p>
+
+				</section>
+
+				<section>
+					<h3>Limitaciones del Clock</h3>
+
+					<img class="r-stretch" src="images/C05/ClockCPU.png">
+					<p></p>
+				</section>
+				<section data-auto-animate>
+					<h4>Multi-Cycle processor</h4>
+					<img class="r-stretch" src="images/C05/MultiCPU.png">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Clock en Multi-Cycle</h4>
+					<img class="r-stretch" src="images/C05/MultiClock.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Pipelined Processor</h4>
+					<img class="r-stretch" src="images/C05/Pipelined.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h1>Arquitecturas Multi-core</h1>
+
+				</section>
+
+				<section data-auto-animate>
+					<h5>Arquitecturas Multi-core</h5>
+					<h4>Intel Skylake COre I7</h4>
+					<img class="r-stretch" src="images/C05/intel.png">
+				</section>
+
+				<section data-auto-animate>
+					<h5>Arquitecturas Multi-core</h5>
+					<h4>Intel Skylake COre I7</h4>
+					<img class="r-stretch" src="images/C05/intel2.png">
+				</section>
+
+
+				<section data-auto-animate>
+					<h5>Arquitecturas Multi-core</h5>
+					<h4>GPU</h4>
+					<div class="row">
+						<div class="col fragment">
+							<img class="r-stretch" src="images/C05/gpu1.png">
+						</div>
+						<div class="col fragment">
+							<img class="r-stretch" src="images/C05/gpu2.png">
+						</div>
+					</div>
+
+				</section>
+
+			</section>
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/countdown/countdown.js"></script>
+	<script src="plugin/animate/plugin.js"></script>
+	<script src="plugin/animate/svg.min.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+
+				{ src: "plugin/countdown/countdown.js" },
+
+			],
+			animate: {
+				autoplay: true
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
+			countdown: { defaultTime: 300, autostart: true },
+
+			autoAnimateEasing: 'ease-out',
+			autoAnimateDuration: 10,
+			autoAnimateUnmatched: false
+
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
