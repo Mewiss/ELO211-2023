@@ -14,7 +14,7 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins/menu/font-awesome/css/fontawesome.css">
+
 	<style>
 		.fragment.bold {
 			font-weight: normal;
@@ -82,653 +82,212 @@
 
 			<section class="Title" data-include>
 				<p class="r-fit-text">ELO211 Sistemas Digitales</p>
-				<h2> Síntesis de Circuitos secuenciales</h2>
+				<h2>Circuitos secuenciales: otros métodos</h2>
 				<p>Marie González-Inostroza</p>
+
+			</section>
+
+
+			<section> <!-- Clock -->
+				<h3>Clock</h3>
+				<p>Periodo (T): duración de un ciclo del clock </p>
+				<p>frecuencia (f): cantidad de ciclos por unidad de tiempo f=1/T </p>
+				<img src="images/C04/C04-Clock-def.svg">
+				<!--
+			<span class="fragment"></span>
+
+			<div data-animate data-src="images/C04/C04-Clock-def.svg">-->
+				<!-- 
+						{ "setup": [
+						{ "element": "#Periodo", "modifier": "attr", "parameters": [ {"class": "fragment",
+						"data-fragment-index": "0"} ] }
+
+						],
+
+						"animation": [
+						[],
+						[
+						{
+						"element": "#Nor1-in",
+						"modifier": "stroke-width",
+						"parameters": [ 1.0 ]
+						}
+						]
+						]
+						}
+						-->
+
+				<!--</div>-->
 			</section>
 
 			<section>
-				<section>
-					<h6>Recordemos: Semáforo inteligente</h6>
-					<div class="row">
-						<div class="col">
-							<p class="r-fit-text">Un semáforo controla el cruce entre las calles A y B. Para esto,
-								cuenta con los sensores Ta y
-								Tb que indican con un 1 cuando pasa un auto. El semáforo permanecerá en verde para una
-								calle
-								hasta
-								que no pase ningún auto por ella. </p>
-						</div>
-						<div class="col"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
-					</div>
-
-				</section>
-
-
-				<section>
-					<h6>Recordemos: Semáforo inteligente (Moore)</h6>
-					<div class="custom-row">
-						<div class="custom-col-8">
-							<div class="r-stack">
-								<img class="fragment" src="images/C03/EjemploMoore-1.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-2.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-3.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-4.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-5.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-6.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-7.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMoore-8.svg" width="100%">
-							</div>
-						</div>
-						<div class="custom-col-4"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
-					</div>
-				</section>
-
-				<section>
-					<h6>Recordemos: Semáforo inteligente (Mealy)</h6>
-					<div class="custom-row">
-						<div class="custom-col-8">
-							<div class="r-stack">
-								<img class="fragment" src="images/C03/EjemploMealy-1.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMealy-2.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMealy-3.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMealy-4.svg" width="100%">
-								<img class="fragment" src="images/C03/EjemploMealy-5.svg" width="100%">
-
-							</div>
-						</div>
-						<div class="custom-col-4"><img class="r-stretch" src="images/C04/C04-Semaforo.svg"></div>
-					</div>
-				</section>
-
+				<h3>Registros</h3>
+				<p> Cuando queremos guardar información de largo N, usamos un grupo de N flipflops que usan el mismo
+					clock </p>
 			</section>
 
-			</section>
-
-			<section data-auto-animate>
-				<h6 class="r-fit-text">Circuito secuencial con Máquina de Moore</h6>
-				<img class="r-stretch" data-id="box" src="images/C04/C04-GeneralMoore.svg">
-			</section>
-
-			<section data-auto-animate>
-				<h6 class="r-fit-text">Circuito secuencial con Máquina de Mealy</h6>
-				<img class="r-stretch" data-id="box" src="images/C04/C04-GeneralMealy.svg">
-			</section>
-
+			<!--Repaso-->
+			<!--Circuitos-->
 			<section>
+				<h3>Ejemplo: opciones de codificación de estados</h4>
 
-				<section>
-					<h3>Ejemplo: opciones de codificación de estados de la máquina de Moore</h4>
-
-						<table class="tg r-stretch">
-							<thead>
-								<tr>
-									<th class="tg-0lax">State</th>
-									<th class="tg-0lax fragment" data-fragment-index="1">C. binario</th>
-									<th class="tg-0lax fragment" data-fragment-index="2">C. Gray</th>
-									<th class="tg-0lax fragment" data-fragment-index="3">C. One-Hot</th>
-									<th class="tg-0lax fragment" data-fragment-index="4">C. One-Cold</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="tg-0lax">S0</td>
-									<td class="tg-0lax fragment" data-fragment-index="1">00</td>
-									<td class="tg-0lax fragment" data-fragment-index="2">00</td>
-									<td class="tg-0lax fragment" data-fragment-index="3">0001<br></td>
-									<td class="tg-0lax fragment" data-fragment-index="4">1110</td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">S1</td>
-									<td class="tg-0lax fragment" data-fragment-index="1">01</td>
-									<td class="tg-0lax fragment" data-fragment-index="2">01</td>
-									<td class="tg-0lax fragment" data-fragment-index="3">0010<br></td>
-									<td class="tg-0lax fragment" data-fragment-index="4">1101</td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">S2</td>
-									<td class="tg-0lax fragment" data-fragment-index="1">10<br></td>
-									<td class="tg-0lax fragment" data-fragment-index="2">11</td>
-									<td class="tg-0lax fragment" data-fragment-index="3">0100<br></td>
-									<td class="tg-0lax fragment" data-fragment-index="4">1011</td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">S3</td>
-									<td class="tg-0lax fragment" data-fragment-index="1">11</td>
-									<td class="tg-0lax fragment" data-fragment-index="2">10</td>
-									<td class="tg-0lax fragment" data-fragment-index="3">1000</td>
-									<td class="tg-0lax fragment" data-fragment-index="4">0111</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<p class="fragment">Se debe elegir una estrategia de codificación. Utilizaremos un Flip-Flop por
-							cada bit de estado.</p>
-				</section>
-
-				<section>
-					<h4>Tablas de estados, transiciones y salidas máquina de Moore</h4>
-					<div class="row">
-						<div class="col">
-
-							<table class="tg fragment">
-								<thead>
-									<tr>
-										<th class="tg-small">S(t)</th>
-										<th class="tg-small">Cod.</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-small">S0</td>
-										<td class="tg-small">00</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S1</td>
-										<td class="tg-small">01</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S2</td>
-										<td class="tg-small">10</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S3</td>
-										<td class="tg-small">11</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="col">
-
-							<table class="tg fragment">
-								<thead>
-									<tr>
-										<th class="tg-small">State</th>
-										<th class="tg-small">LA</th>
-										<th class="tg-small">LB</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-small">S0</td>
-										<td class="tg-small">001</td>
-										<td class="tg-small">100</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S1</td>
-										<td class="tg-small">010</td>
-										<td class="tg-small">100</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S2</td>
-										<td class="tg-small">100</td>
-										<td class="tg-small">001</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S3</td>
-										<td class="tg-small">100</td>
-										<td class="tg-small">010</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div class="col">
-
-							<table class="tg fragment">
-								<thead>
-									<tr>
-										<th class="tg-small">S(t)</th>
-										<th class="tg-small">In(TATB)</th>
-										<th class="tg-small">S(t+1)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-small">S0</td>
-										<td class="tg-small">1X</td>
-										<td class="tg-small">S0</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S0</td>
-										<td class="tg-small">0X</td>
-										<td class="tg-small">S1</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S1</td>
-										<td class="tg-small">XX</td>
-										<td class="tg-small">S2</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S2</td>
-										<td class="tg-small">X1</td>
-										<td class="tg-small">S2</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S2</td>
-										<td class="tg-small">X0</td>
-										<td class="tg-small">S3</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S3</td>
-										<td class="tg-small">XX</td>
-										<td class="tg-small">S0</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<h4>Tabla de estados y transiciones máquina de Moore</h4>
-					<div class="row">
-						<div class="col">
-							<img src="images/C04/C04-EjemploMoore.svg">
-						</div>
-
-						<div class="col">
-							<table class="tg ">
-								<thead>
-									<tr>
-										<th class="tg-0lax">St</th>
-										<th class="tg-0lax">In(Ta,Tb)<br></th>
-										<th class="tg-0lax">St+1</th>
-										<th class="tg-0lax ">Out(La,Lb)<br></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
-										<td class="tg-0lax">0X<br></td>
-										<td class="tg-0lax">01<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">001100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
-										<td class="tg-0lax">1X</td>
-										<td class="tg-0lax">00</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">001100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">01</td>
-										<td class="tg-0lax">XX</td>
-										<td class="tg-0lax">10<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">010100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">10</td>
-										<td class="tg-0lax">X0</td>
-										<td class="tg-0lax">11<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">100001<br></td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">10<br></td>
-										<td class="tg-0lax">X1</td>
-										<td class="tg-0lax">10<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">100001</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">11</td>
-										<td class="tg-0lax">XX</td>
-										<td class="tg-0lax">00</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">100010</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-
-				</section>
-
-				<section>
-					<h6 class="r-fit-text"> Obtener expresiones a partir de la tablas de salidas de una máquina de Moore
-					</h6>
-					<div class="row">
-
-						<div class="col">
-
-							<table class="tg fragment">
-								<thead>
-									<tr>
-										<th class="tg-small">State</th>
-										<th class="tg-small">Código</th>
-										<th class="tg-small">LA</th>
-										<th class="tg-small">LB</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-small">S0</td>
-										<td class="tg-small">00</td>
-										<td class="tg-small">001</td>
-										<td class="tg-small">100</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S1</td>
-										<td class="tg-small">01</td>
-										<td class="tg-small">010</td>
-										<td class="tg-small">100</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S2</td>
-										<td class="tg-small">10</td>
-										<td class="tg-small">100</td>
-										<td class="tg-small">001</td>
-									</tr>
-									<tr>
-										<td class="tg-small">S3</td>
-										<td class="tg-small">11</td>
-										<td class="tg-small">100</td>
-										<td class="tg-small">010</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div class="col">
-
-
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<h4>Obtener expresiones desde la tabla de transiciones de una máquina de Moore</h4>
-					<div class="row">
-						<div class="col">
-
-						</div>
-
-						<div class="col">
-							<table class="tg ">
-								<thead>
-									<tr>
-										<th class="tg-0lax ">St</th>
-										<th class="tg-0lax ">In(Ta,Tb)<br></th>
-										<th class="tg-0lax ">St+1</th>
-										<th class="tg-0lax">Out(La,Lb)<br></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">0X<br></td>
-										<td class="tg-0lax  fragment custom bold" data-fragment-index="1">01<br></td>
-										<td class="tg-0lax">001100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">00</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">1X</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">00</td>
-										<td class="tg-0lax">001100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">01</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">XX</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">10<br></td>
-										<td class="tg-0lax">010100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">10</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">11<br></td>
-										<td class="tg-0lax">100001<br></td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">10<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">10<br></td>
-										<td class="tg-0lax">100001</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">11</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">XX</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">00</td>
-										<td class="tg-0lax">100010</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-
-				</section>
-
-				<section data-auto-animate>
-					<h6 class="r-fit-text">Circuito secuencial con Máquina de Moore</h6>
-					<img class="r-stretch" data-id="box" src="images/C03/C03-GeneralMoore.svg">
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h5>Tabla de estados y transiciones máquina de Mealy</h5>
-
-					<img class="r-stretch" src="images/C04/C04-EjemploMealy.svg">
-
-
-
-					<table class="tg">
+					<table class="tg r-stretch">
 						<thead>
 							<tr>
-								<th class="tg-0lax">St</th>
-								<th class="tg-0lax">In(Ta,Tb)<br></th>
-								<th class="tg-0lax">St+1</th>
-								<th class="tg-0lax">Out(La,Lb)<br></th>
+								<th class="tg-0lax">State</th>
+								<th class="tg-0lax">C. binario</th>
+								<th class="tg-0lax">C. Gray</th>
+								<th class="tg-0lax">C. One-Hot</th>
+								<th class="tg-0lax">C. One-Cold</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="tg-0lax">0</td>
-								<td class="tg-0lax">0X<br></td>
-								<td class="tg-0lax">1<br></td>
-								<td class="tg-0lax">010100</td>
+								<td class="tg-0lax">S0</td>
+								<td class="tg-0lax">00</td>
+								<td class="tg-0lax">00</td>
+								<td class="tg-0lax">0001<br></td>
+								<td class="tg-0lax">1110</td>
 							</tr>
 							<tr>
-								<td class="tg-0lax">0</td>
-								<td class="tg-0lax">1X</td>
-								<td class="tg-0lax">0</td>
-								<td class="tg-0lax">001100</td>
+								<td class="tg-0lax">S1</td>
+								<td class="tg-0lax">01</td>
+								<td class="tg-0lax">01</td>
+								<td class="tg-0lax">0010<br></td>
+								<td class="tg-0lax">1101</td>
 							</tr>
 							<tr>
-								<td class="tg-0lax">1</td>
-								<td class="tg-0lax">X0<br></td>
-								<td class="tg-0lax">0<br></td>
-								<td class="tg-0lax">100001</td>
+								<td class="tg-0lax">S2</td>
+								<td class="tg-0lax">10<br></td>
+								<td class="tg-0lax">11</td>
+								<td class="tg-0lax">0100<br></td>
+								<td class="tg-0lax">1011</td>
 							</tr>
 							<tr>
-								<td class="tg-0lax">1</td>
-								<td class="tg-0lax">X1</td>
-								<td class="tg-0lax">1</td>
-								<td class="tg-0lax">100010</td>
+								<td class="tg-0lax">S3</td>
+								<td class="tg-0lax">11</td>
+								<td class="tg-0lax">10</td>
+								<td class="tg-0lax">1000</td>
+								<td class="tg-0lax">0111</td>
 							</tr>
-
 						</tbody>
 					</table>
 
-				</section>
-
-				<section>
-					<h5>Ej: Síntesis de Máquina de Mealy</h5>
-
-					<div class="row">
-						<div class="col">
-							<table class="tg">
-								<thead>
-									<tr>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="2">
-											In(Ta,Tb)<br>
-										</th>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="0">St+1</th>
-										<th class="tg-0lax">Out(La,Lb)<br></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">0X<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1<br></td>
-										<td class="tg-0lax">010100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">1X</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0</td>
-										<td class="tg-0lax">001100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X0<br></td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="0">0<br></td>
-										<td class="tg-0lax">100001</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="2">X1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="0">1</td>
-										<td class="tg-0lax">100010</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-
-					</div>
-
-				</section>
-
-				<section>
-					<h5>Ej: Síntesis de Máquina de Mealy</h5>
-
-					<div class="row">
-						<div class="col">
-							<table class="tg">
-								<thead>
-									<tr>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="1">
-											In(Ta,Tb)<br>
-										</th>
-										<th class="tg-0lax">St+1</th>
-										<th class="tg-0lax">Out(La,Lb)<br></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
-										<td class="tg-0lax">1<br></td>
-										<td class="tg-0lax"><span class="fragment custom bold"
-												data-fragment-index="0">0</span>10100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
-										<td class="tg-0lax">0</td>
-										<td class="tg-0lax"><span class="fragment custom bold"
-												data-fragment-index="0">0</span>01100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
-										<td class="tg-0lax">0<br></td>
-										<td class="tg-0lax"><span class="fragment custom bold"
-												data-fragment-index="0">1</span>00001</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
-										<td class="tg-0lax">1</td>
-										<td class="tg-0lax"><span class="fragment custom bold"
-												data-fragment-index="0">1</span>00010</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-
-					</div>
-
-
-				</section>
-
-
-				<section>
-					<h5>Ej: Síntesis de Máquina de Mealy</h5>
-
-					<div class="row">
-						<div class="col">
-							<table class="tg">
-								<thead>
-									<tr>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="1">St</th>
-										<th class="tg-0lax fragment custom bold" data-fragment-index="1">
-											In(Ta,Tb)<br>
-										</th>
-										<th class="tg-0lax">St+1</th>
-										<th class="tg-0lax">Out(La,Lb)<br></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0X<br></td>
-										<td class="tg-0lax">1<br></td>
-										<td class="tg-0lax">0<span class="fragment custom bold"
-												data-fragment-index="0">1</span>0100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">0</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1X</td>
-										<td class="tg-0lax">0</td>
-										<td class="tg-0lax">0<span class="fragment custom bold"
-												data-fragment-index="0">0</span>1100</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X0<br></td>
-										<td class="tg-0lax">0<br></td>
-										<td class="tg-0lax">1<span class="fragment custom bold"
-												data-fragment-index="0">0</span>0001</td>
-									</tr>
-									<tr>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">1</td>
-										<td class="tg-0lax fragment custom bold" data-fragment-index="1">X1</td>
-										<td class="tg-0lax">1</td>
-										<td class="tg-0lax">1<span class="fragment custom bold"
-												data-fragment-index="0">0</span>0010</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-
-					</div>
-				</section>
-
-				<section data-auto-animate>
-					<h6 class="r-fit-text">Circuito secuencial con Máquina de Mealy</h6>
-					<img class="r-stretch" data-id="box" src="images/C03/C03-GeneralMealy.svg">
-				</section>
+					<p class="fragment">Se debe elegir una estrategia de codificación</p>
 			</section>
 
 			<section>
-				<h6>Resumen metodología de diseño con FSMs</h6>
-				<ul class="r-fit-text">
-					<li class="fragment">Identificar entradas y salidas del sistema</li>
-					<li class="fragment"> Definir modelo a utilizar (Mealy o Moore) según conveniencia del problema</li>
-					<li class="fragment"> Definir estados a utilizar y decidir si se puede factorizar la máquina</li>
-					<li class="fragment"> Realizar diagrama de transiciones de estados</li>
-					<li class="fragment"> Realizar tabla de codificación de estados</li>
-					<li class="fragment"> Realizar tabla de transiciones</li>
-					<li class="fragment"> Para Moore: realizar tabla de estados y tabla de salidas</li>
-					<li class="fragment"> Para Mealy: realizar tabla de estados y salidas</li>
-					<li class="fragment"> Obtener expresión booleana que corresponda a cada FF y cada salida mediante mapa de Karnaugh,
-					minitérminos, maxitérminos u otro método.</li>
-					<li class="fragment"> Dibujar esquemático correspondiente.</li>
-				</ul>
+				<h5>Flip-Flop JK</h5>
+				<div class="row">
+					<div class="col fragment">
+						<img class="r-stretch" src="images/C04/C04-FFJK.svg">
+					</div>
+					<div class="col fragment">
+						<img class="r-stretch" src="images/C04/C04-FFJK-TablaVerdad.svg">
+					</div>
+				</div>
 
 			</section>
+
+
+
+
+			<section>
+				<h2>Máquinas factorizadas</h2>
+			</section>
+
+			<section>
+				<h4>Caso de estudio: Semáforo inteligente modificado</h4>
+				<p> Después de unos meses de evaluación del circuito implementado, en base a su máquina de Moore, la
+					Municipalidad le ha pedido modificar su máquina. En concreto, quieren que los semáforos
+					estén al menos 4 ciclos reloj en cada verde y 2 en amarillo y que no se salte ningún color. </p>
+				<img class="r-stretch" src="images/C04/C04-Semaforo.svg">
+			</section>
+
+			<section>
+				<h7>Caso de estudio: Semáforo inteligente modificado</h7>
+				<h5>Propuesta de solución con una máquina</h5>
+				<img class="r-stretch" src="images/C04/C04Factorization.drawio.svg">
+			</section>
+			<section>
+				<h7 data-id="title">Caso de estudio: Semáforo inteligente modificado</h7>
+				<h5 data-id="titlebig">Propuesta de solución factorizada</h5>
+				<div class="r-stack">
+					<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationDosMaq-0.svg">
+					<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationDosMaq-1.svg">
+					<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationDosMaq-2.svg">
+					<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationDosMaq-3.svg">
+					<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationDosMaq-4.svg">
+				</div>
+
+			</section>
+
+			<section>
+				<h7>Caso de estudio: Semáforo inteligente modificado</h7>
+				<h5>Propuesta de solución factorizada opción 2</h5>
+				<img data-id="image" class="r-stretch fragment" src="images/C04/C04FactorizationTresMaq.svg">
+			</section>
+
+			<section>
+				<section>
+					<h2>Actividad 17</h2>
+					<h6>Síntesis de máquinas secuenciales factorizadas</h6>
+					<h3>Trabajo grupal</h3>
+				</section>
+				
+
+				<section>
+
+					<h4>Actividad 17</h4>
+					<p><em>En grupos, obtengan un circuito secuencial que implemente una de las opciones de máquina secuencial planteada.</em></p>
+
+					<p>Utilicen Flip-Flops JK y codificaciones de estado que no sean numeración binaria.</p>
+					<countdown time="600" autostart="yes" />
+
+				</section>
+				
+			</section>
+
+			<section>
+				<section>
+					<h2>Actividad 17</h2>
+					<h6>Planteamiento de una máquina secuencial factorizada</h6>
+					<h3>Trabajo grupal</h3>
+				</section>
+				
+
+				<section>
+
+					<h4>Actividad 16</h4>
+					<p><em>En grupos, planteen los diagramas de transiciones para le siguiente caso:</em></p>
+
+					<p class="r-stretch" style="font-size:30px">
+						Se le ha pedido diseñar una FSM factorizada capaz de controlar una cámara digital. Esta debe
+						encargarse del sistema central de la cámara y enviar señales a los distintos sistemas. La única
+						entrada de control de la cámara es el botón de toma de imágenes. Una vez que se aprieta el botón,
+						debe iniciarse el sistema de auto-enfoque, que permite calcular la
+						distancia a la que está el objeto central. Si se mantiene presionado el botón luego de terminado el
+						enfoque, se debe iniciar el proceso de toma
+						de imagen. La toma de imagen consiste en tomar una imagen durante el tiempo de obturación (varios
+						ciclos de
+						reloj). Una vez concluida la toma de imagen, se debe iniciar el proceso de guardado. Durante este
+						tiempo, la
+						pantalla queda en negro. Luego de terminar la toma de imagen, la cámara está en modo espera. En este
+						caso, la pantalla debe
+						estar activa mostrando la imagen de previsualización. Al concluir, debe sonar un bip! Por 6 tiempos
+						de reloj.
+					</p>
+					<countdown time="600" autostart="yes" />
+
+				</section>
+				
+			</section>
+
+
+
+
+
+
 
 		</div>
 	</div>
@@ -741,19 +300,6 @@
 	<script src="plugin/animate/plugin.js"></script>
 	<script src="plugin/animate/svg.min.js"></script>
 	<script src="plugin/math/math.js"></script>
-
-
-	<!-- Font awesome is required for the chalkboard plugin -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<!-- Custom controls plugin is used to for opening and closing annotation modes. -->
-	<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/plugin.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/style.css">
-	<!-- Chalkboard plugin -->
-	<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css">
-
-
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -769,25 +315,9 @@
 			animate: {
 				autoplay: true
 			},
-			customcontrols: {
-				controls: [
-					{
-						icon: '<i class="fa fa-pen-square"></i>',
-						title: 'Toggle chalkboard (B)',
-						action: 'RevealChalkboard.toggleChalkboard();'
-					},
-					{
-						icon: '<i class="fa fa-pen"></i>',
-						title: 'Toggle notes canvas (C)',
-						action: 'RevealChalkboard.toggleNotesCanvas();'
-					}
-				]
-			},
-			chalkboard: {
-				// add configuration here
-			},
+
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate, RevealChalkboard, RevealCustomControls],
+			plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate],
 			countdown: { defaultTime: 300, autostart: true },
 
 			autoAnimateEasing: 'ease-out',
